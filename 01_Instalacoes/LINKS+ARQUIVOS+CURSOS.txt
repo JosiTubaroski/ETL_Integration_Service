@@ -1,0 +1,69 @@
+WINDOWS SERVER 2016, SQL SERVER 2016 e FERRAMENTAS DE BI (PASTA COMPLETA)
+
+https://drive.google.com/open?id=1uD7Nlcmd91iaRyEWJr3uGJHG9ei8jQO8
+
+WINDOWS SERVER 2012
+
+https://drive.google.com/file/d/0B3fLqCD6cdgQSFE5OUdVMVdLRWM/view
+
+DOT NET
+
+https://drive.google.com/open?id=0B3fLqCD6cdgQZzFRSklFRGxXMXc
+
+LINKS DADOS ETL
+
+https://drive.google.com/open?id=0B3fLqCD6cdgQZ3hjRk1JMDRhbEU --> senha udemy
+
+https://drive.google.com/open?id=16LTDLwj5BJKzbrWfNVYDCOZ172Se7XGg --> Sem Senha
+
+BASES ADVENTURE WORKS - Parei aqui
+
+Opção 01 - MDF
+
+https://drive.google.com/open?id=1VZzHG2bkC-o6FTnGR0H2qDIhJ_qOjSdC --> BASE DW
+https://drive.google.com/open?id=1H1cqvElI30p8foXKLJU5J8Rn0brpDyB2 --> BASE OLTP
+
+Opção 02
+
+https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2012/adventure-works-2012-oltp-data-file.mdf
+https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2012/adventure-works-2012-dw-data-file.mdf
+
+TODOS OS ARQUIVOS .BAK DO ADVENTURE WORKS
+
+https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks
+
+LINKS PROGRAMAS MICROSOFT
+
+SQL SERVER 2016
+
+https://www.dropbox.com/s/0ut7ubyvpvhldox/SQL%20Server%202016.rar?dl=0
+https://drive.google.com/open?id=0B3fLqCD6cdgQZEc5UURDTncyUzA
+
+SSDT 
+
+https://www.dropbox.com/s/o8w10v6gpo92fvv/SSDTSetup.exe?dl=0
+https://drive.google.com/open?id=0B3fLqCD6cdgQU2RGY0lhbFZJaUE
+
+SSMS 
+
+https://www.dropbox.com/s/w6m2ormc6zcgr9f/SSMS-Setup-ENU.exe?dl=0
+https://drive.google.com/open?id=0B3fLqCD6cdgQX2NDT3R6eGFDcmM
+
+VISUAL STUDIO 
+
+https://www.dropbox.com/s/4uokj34zle72qyv/vs_community__1420630823.1478997468.exe?dl=0
+https://drive.google.com/open?id=0B3fLqCD6cdgQbmItTUw4NkhQYUU
+
+JAVA
+
+https://www.dropbox.com/s/e6belvs7c0vsyk0/jre-8u144-windows-x64.exe?dl=0
+
+WINDOWS 10 
+
+https://drive.google.com/open?id=1Y7lU8lw_NLNOHO-WOKjfKH2m7EBGLV52
+
+https://www.dropbox.com/s/m0wcdscnp3uib85/Win10.PRO.X64.iso?dl=0
+
+WINDOWS SERVER 2016 e SQL SERVER 2017 (PASTA COMPLETA - VS,SSMS E DTOOLS)
+
+https://drive.google.com/open?id=1BVIhbzeTnLB7uhgH7blXG_6Ca7__VBOu
