@@ -1,0 +1,854 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/30/2020 4:38:36 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-74VND56R"
+  DTS:CreatorName="LAPTOP-74VND56R\Josi"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{C2824379-C791-417C-9E7E-4D1B7357B4B7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Package1"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{51A42EBC-6F9C-44C4-AFC4-6594AFAC6833}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{ACC0EF5F-59C1-4240-A59F-664DA7823991}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-74VND56R\JOSISQLSERVER;Initial Catalog=PRJ_INTEGRATION;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AB064F18-434E-4AA9-BAEE-5457D75D2F74}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=C:\Users\Josi\Desktop\04.Estudo\03_Banco_Dados\02.ETLs\08_Wizard-Avançadas_Tipagem\Books2010.accdb;OLE DB SERVICES=0;Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa Fluxo de Dados 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{32AB5894-D1D1-4A3C-9897-6C8603863751}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa Fluxo de Dados 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversão de Dados;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversão de Dados"
+              name="Conversão de dados 0 - 0"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Inputs[Entrada de Conversão de Dados]"
+                  name="Entrada de Conversão de Dados">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Inputs[Entrada de Conversão de Dados].Columns[emp_id]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="emp_id"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[emp_id]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Inputs[Entrada de Conversão de Dados].Columns[fname]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="fname"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[fname]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Inputs[Entrada de Conversão de Dados].Columns[minit]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="minit"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[minit]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Inputs[Entrada de Conversão de Dados].Columns[lname]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="lname"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[lname]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Inputs[Entrada de Conversão de Dados].Columns[pub_id]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="pub_id"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[pub_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados]"
+                  exclusionGroup="1"
+                  name="Saída de Conversão de Dados"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Inputs[Entrada de Conversão de Dados]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[emp_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      length="9"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[emp_id]"
+                      name="emp_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                          name="SourceInputColumnLineageID">#{Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[emp_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[fname]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[fname]"
+                      name="fname"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                          name="SourceInputColumnLineageID">#{Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[fname]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[minit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[minit]"
+                      name="minit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                          name="SourceInputColumnLineageID">#{Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[minit]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[lname]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      length="30"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[lname]"
+                      name="lname"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                          name="SourceInputColumnLineageID">#{Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[lname]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[pub_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      length="4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[pub_id]"
+                      name="pub_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                          name="SourceInputColumnLineageID">#{Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[pub_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Erro de Conversão de Dados]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Conversão de Dados"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Inputs[Entrada de Conversão de Dados]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Erro de Conversão de Dados].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Erro de Conversão de Dados].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Erro de Conversão de Dados].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Erro de Conversão de Dados].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Destino - Funcionarios"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[Funcionarios]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].Columns[emp_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="emp_id"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[emp_id]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[emp_id]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].Columns[fname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="fname"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[fname]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[fname]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].Columns[minit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="minit"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[minit]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[minit]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].Columns[lname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="lname"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[lname]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[lname]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].Columns[job_id]"
+                      cachedDataType="i2"
+                      cachedName="job_id"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[job_id]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[job_id]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].Columns[job_lvl]"
+                      cachedDataType="i2"
+                      cachedName="job_lvl"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[job_lvl]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[job_lvl]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].Columns[pub_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="pub_id"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[pub_id]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados].Columns[pub_id]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].Columns[hire_date]"
+                      cachedDataType="date"
+                      cachedName="hire_date"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[hire_date]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[hire_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[emp_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="emp_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[fname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="fname" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[minit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="minit" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[lname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="lname" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[job_id]"
+                      dataType="i2"
+                      name="job_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[job_lvl]"
+                      dataType="i2"
+                      name="job_lvl" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[pub_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="pub_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input].ExternalColumns[hire_date]"
+                      dataType="date"
+                      name="hire_date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+              description="Origem OLE DB"
+              name="Origem - Employees"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">Employees</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB]"
+                  name="Saída de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[emp_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[emp_id]"
+                      length="9"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[emp_id]"
+                      name="emp_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[fname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[fname]"
+                      length="20"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[fname]"
+                      name="fname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[minit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[minit]"
+                      length="1"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[minit]"
+                      name="minit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[lname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[lname]"
+                      length="30"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[lname]"
+                      name="lname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[job_id]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[job_id]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[job_id]"
+                      name="job_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[job_lvl]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[job_lvl]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[job_lvl]"
+                      name="job_lvl"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[pub_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[pub_id]"
+                      length="4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[pub_id]"
+                      name="pub_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[hire_date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[hire_date]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].Columns[hire_date]"
+                      name="hire_date"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[emp_id]"
+                      dataType="wstr"
+                      length="9"
+                      name="emp_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[fname]"
+                      dataType="wstr"
+                      length="20"
+                      name="fname" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[minit]"
+                      dataType="wstr"
+                      length="1"
+                      name="minit" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[lname]"
+                      dataType="wstr"
+                      length="30"
+                      name="lname" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[job_id]"
+                      dataType="i2"
+                      name="job_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[job_lvl]"
+                      dataType="i2"
+                      name="job_lvl" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[pub_id]"
+                      dataType="wstr"
+                      length="4"
+                      name="pub_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB].ExternalColumns[hire_date]"
+                      dataType="date"
+                      name="hire_date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[emp_id]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[emp_id]"
+                      name="emp_id" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[fname]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[fname]"
+                      name="fname" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[minit]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[minit]"
+                      name="minit" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[lname]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[lname]"
+                      name="lname" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[job_id]"
+                      dataType="i2"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[job_id]"
+                      name="job_id" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[job_lvl]"
+                      dataType="i2"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[job_lvl]"
+                      name="job_lvl" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[pub_id]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[pub_id]"
+                      name="pub_id" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[hire_date]"
+                      dataType="date"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[hire_date]"
+                      name="hire_date" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarefa Fluxo de Dados 1.Paths[Saída de Conversão de Dados]"
+              endId="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios.Inputs[Destination Input]"
+              name="Saída de Conversão de Dados"
+              startId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Outputs[Saída de Conversão de Dados]" />
+            <path
+              refId="Package\Tarefa Fluxo de Dados 1.Paths[Saída de Origem OLE DB]"
+              endId="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0.Inputs[Entrada de Conversão de Dados]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Tarefa Fluxo de Dados 1\Origem - Employees.Outputs[Saída de Origem OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa SQL de Preparação 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{E5616C48-3373-434D-AB5E-196A0ED036AD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa SQL de Preparação 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ACC0EF5F-59C1-4240-A59F-664DA7823991}"
+          SQLTask:SqlStatementSource="DROP TABLE FUNCIONARIOS&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[Funcionarios] (&#xA;[emp_id] varchar(9) NOT NULL,&#xA;[fname] varchar(20) NOT NULL,&#xA;[minit] varchar(1),&#xA;[lname] varchar(30) NOT NULL,&#xA;[job_id] smallint NOT NULL,&#xA;[job_lvl] smallint NOT NULL,&#xA;[pub_id] varchar(4) NOT NULL,&#xA;[hire_date] datetime NOT NULL&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{B66D9336-524E-4B13-8E20-3D2AAAFA1825\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{B66D9336-524E-4B13-8E20-3D2AAAFA1825}"
+      DTS:From="Package\Tarefa SQL de Preparação 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{B66D9336-524E-4B13-8E20-3D2AAAFA1825}"
+      DTS:To="Package\Tarefa Fluxo de Dados 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Tarefa Fluxo de Dados 1"
+          TopLeft="14,107.5" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Tarefa SQL de Preparação 1"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{B66D9336-524E-4B13-8E20-3D2AAAFA1825\}]"
+          TopLeft="111,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarefa Fluxo de Dados 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Tarefa Fluxo de Dados 1\Origem - Employees"
+          TopLeft="18.5,5.5" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Tarefa Fluxo de Dados 1\Conversão de dados 0 - 0"
+          TopLeft="5.50000000000003,107.5" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Tarefa Fluxo de Dados 1\Destino - Funcionarios"
+          TopLeft="13.5,209.5" />
+        <EdgeLayout
+          Id="Package\Tarefa Fluxo de Dados 1.Paths[Saída de Origem OLE DB]"
+          TopLeft="105.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarefa Fluxo de Dados 1.Paths[Saída de Conversão de Dados]"
+          TopLeft="105.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

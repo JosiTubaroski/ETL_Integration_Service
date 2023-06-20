@@ -1,0 +1,1133 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/28/2020 3:21:20 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-74VND56R"
+  DTS:CreatorName="LAPTOP-74VND56R\Josi"
+  DTS:DTSID="{9CC4C3B6-005F-4357-9FE1-42E2ACA0F93F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{EEB14E12-0501-4B1D-AA5B-7DC0B8CFE377}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{E9A828A3-41DF-45DB-A2CB-A8A26A56154C}"
+      DTS:ObjectName="Gerenciador de Conexões do Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Dados\Customers.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa Executar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{2633554D-76E4-4BE0-86CA-DB45AEB4D6CC}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa Executar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C836EB32-2D6E-4D87-9DF6-9C620E0FC55C}"
+          SQLTask:SqlStatementSource="delete from dbo.CLIENTES_Aula_trans;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa Fluxo de Dados"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{9299FE89-D96A-4457-9ADB-ACC721EA2A51}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa Fluxo de Dados"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\Clientes"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Clientes"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[CLIENTES_Aula_Trans]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados\Clientes.Connections[OleDbConnection]"
+                  connectionManagerID="{C836EB32-2D6E-4D87-9DF6-9C620E0FC55C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Conector_BancoDados]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].Columns[Genero]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Genero"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[SEXO]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada].Columns[Genero]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].Columns[Nome Completo]"
+                      cachedDataType="wstr"
+                      cachedLength="511"
+                      cachedName="Nome Completo"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_COMPLETO]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada].Columns[Nome Completo]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].Columns[TotalChildren]"
+                      cachedDataType="r8"
+                      cachedName="TotalChildren"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[FILHOS]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[TotalChildren]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].Columns[NumberChildrenAtHome]"
+                      cachedDataType="r8"
+                      cachedName="NumberChildrenAtHome"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTD_Filhos]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[NumberChildrenAtHome]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].Columns[MaritalStatus]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="MaritalStatus"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[ESTADO_CIVIL]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[MaritalStatus]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME_COMPLETO]"
+                      dataType="wstr"
+                      length="511"
+                      name="NOME_COMPLETO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[ESTADO_CIVIL]"
+                      dataType="wstr"
+                      length="255"
+                      name="ESTADO_CIVIL" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[SEXO]"
+                      dataType="wstr"
+                      length="20"
+                      name="SEXO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[FILHOS]"
+                      dataType="wstr"
+                      length="5"
+                      name="FILHOS" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB].ExternalColumns[QTD_Filhos]"
+                      dataType="i4"
+                      name="QTD_Filhos" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Clientes.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Clientes.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Clientes.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Clientes.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\Divisão Condicional"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Divisão Condicional;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Encaminha colunas de dados para saídas diferentes, dependendo do conteúdo dos dados. Use condições (expressões do SSIS) para especificar quais linhas são encaminhadas. Por exemplo, separe os registros que precisam ser limpos daqueles que estão prontos para serem carregados ou encaminhe somente um subconjunto de registros."
+              name="Divisão Condicional"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  description="Entrada para a Transformação Divisão Condicional"
+                  name="Entrada de Divisão Condicional">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Inputs[Entrada de Divisão Condicional].Columns[TotalChildren]"
+                      cachedDataType="r8"
+                      cachedName="TotalChildren"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[TotalChildren]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Outputs[Total_Filhos]"
+                  description="Saída 1 da Transformação Divisão Condicional"
+                  errorOrTruncationOperation="Computação"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Total_Filhos"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
+                      name="Expression">#{Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[TotalChildren]} &lt;= 2</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
+                      expressionType="Notify"
+                      name="FriendlyExpression">TotalChildren &lt;= 2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Outputs[Mais de Dois Filhos]"
+                  description="Saída Padrão da Transformação Divisão Condicional"
+                  exclusionGroup="1"
+                  name="Mais de Dois Filhos"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Inputs[Entrada de Divisão Condicional]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional]"
+                  description="Saída de Erro da Transformação Divisão Condicional"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Divisão Condicional"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Inputs[Entrada de Divisão Condicional]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Coluna Derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Cria novos valores de coluna aplicando expressões a colunas de entrada da transformação. Crie novas colunas ou substitua as existentes. Por exemplo, concatene os valores das colunas 'first name' e 'last name' para formar uma coluna 'full name'."
+              name="Nome_EstadoCivil_Genero"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Inputs[Entrada de Coluna Derivada]"
+                  description="Entrada para a Transformação Coluna Derivada"
+                  name="Entrada de Coluna Derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Inputs[Entrada de Coluna Derivada].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FirstName"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Inputs[Entrada de Coluna Derivada].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LastName"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Inputs[Entrada de Coluna Derivada].Columns[MaritalStatus]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="MaritalStatus"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[MaritalStatus]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Inputs[Entrada de Coluna Derivada].Columns[Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Gender"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Gender]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada]"
+                  description="Saída Padrão da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  name="Saída de Coluna Derivada"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada].Columns[Nome Completo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      length="511"
+                      lineageId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada].Columns[Nome Completo]"
+                      name="Nome Completo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">#{Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[FirstName]} + " " + #{Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[LastName]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">FirstName + " " + LastName</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada].Columns[Estado Civil]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada].Columns[Estado Civil]"
+                      name="Estado Civil"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">#{Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[MaritalStatus]} == "S" ? "Solteiro" : #{Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[MaritalStatus]} == "M" ? "Casado" : "Outros"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">MaritalStatus == "S" ? "Solteiro" : MaritalStatus == "M" ? "Casado" : "Outros"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada].Columns[Genero]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada].Columns[Genero]"
+                      name="Genero"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">#{Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Gender]} == "F" ? "Feminino" : #{Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Gender]} == "M" ? "Maculino" : "Outros"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Gender == "F" ? "Feminino" : Gender == "M" ? "Maculino" : "Outros"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Erro de Coluna Derivada]"
+                  description="Saída de Erro da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Coluna Derivada"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origem do Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem do Excel"
+              name="PLANILHA CUSTOMERS"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">Customers$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="O mapeamento de parâmetros no comando SQL para variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel]"
+                  name="Saída de Origem do Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[FirstName]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[MiddleInitial]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[MiddleInitial]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[MiddleInitial]"
+                      name="MiddleInitial"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[LastName]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[BirthDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[BirthDate]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[BirthDate]"
+                      name="BirthDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[MaritalStatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[MaritalStatus]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[MaritalStatus]"
+                      name="MaritalStatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Gender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[Gender]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[EmailAddress]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[EmailAddress]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[EmailAddress]"
+                      name="EmailAddress"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[YearlyIncome]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[YearlyIncome]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[YearlyIncome]"
+                      name="YearlyIncome"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[TotalChildren]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[TotalChildren]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[TotalChildren]"
+                      name="TotalChildren"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[NumberChildrenAtHome]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[NumberChildrenAtHome]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[NumberChildrenAtHome]"
+                      name="NumberChildrenAtHome"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Education]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[Education]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Education]"
+                      name="Education"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Occupation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[Occupation]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Occupation]"
+                      name="Occupation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[HouseOwnerFlag]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[HouseOwnerFlag]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[HouseOwnerFlag]"
+                      name="HouseOwnerFlag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[NumberCarsOwned]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[NumberCarsOwned]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[NumberCarsOwned]"
+                      name="NumberCarsOwned"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[AddressLine1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[AddressLine1]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[AddressLine1]"
+                      name="AddressLine1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[AddressLine2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[AddressLine2]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[AddressLine2]"
+                      name="AddressLine2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[City]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[State]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[State]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[ZIP]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[ZIP]"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[ZIP]"
+                      name="ZIP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[Phone]"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].Columns[Phone]"
+                      name="Phone"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[MiddleInitial]"
+                      dataType="wstr"
+                      length="255"
+                      name="MiddleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[BirthDate]"
+                      dataType="date"
+                      name="BirthDate" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[MaritalStatus]"
+                      dataType="wstr"
+                      length="255"
+                      name="MaritalStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="255"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[EmailAddress]"
+                      dataType="wstr"
+                      length="255"
+                      name="EmailAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[YearlyIncome]"
+                      dataType="r8"
+                      name="YearlyIncome" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[TotalChildren]"
+                      dataType="r8"
+                      name="TotalChildren" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[NumberChildrenAtHome]"
+                      dataType="r8"
+                      name="NumberChildrenAtHome" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[Education]"
+                      dataType="wstr"
+                      length="255"
+                      name="Education" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[Occupation]"
+                      dataType="wstr"
+                      length="255"
+                      name="Occupation" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[HouseOwnerFlag]"
+                      dataType="r8"
+                      name="HouseOwnerFlag" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[NumberCarsOwned]"
+                      dataType="r8"
+                      name="NumberCarsOwned" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[AddressLine1]"
+                      dataType="wstr"
+                      length="255"
+                      name="AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[AddressLine2]"
+                      dataType="wstr"
+                      length="255"
+                      name="AddressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="255"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[ZIP]"
+                      dataType="r8"
+                      name="ZIP" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="255"
+                      name="Phone" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem do Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[MiddleInitial]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[MiddleInitial]"
+                      name="MiddleInitial" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[LastName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[BirthDate]"
+                      dataType="date"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[BirthDate]"
+                      name="BirthDate" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[MaritalStatus]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[MaritalStatus]"
+                      name="MaritalStatus" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[Gender]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[Gender]"
+                      name="Gender" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[EmailAddress]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[EmailAddress]"
+                      name="EmailAddress" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[YearlyIncome]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[YearlyIncome]"
+                      name="YearlyIncome" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[TotalChildren]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[TotalChildren]"
+                      name="TotalChildren" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[NumberChildrenAtHome]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[NumberChildrenAtHome]"
+                      name="NumberChildrenAtHome" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[Education]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[Education]"
+                      name="Education" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[Occupation]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[Occupation]"
+                      name="Occupation" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[HouseOwnerFlag]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[HouseOwnerFlag]"
+                      name="HouseOwnerFlag" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[NumberCarsOwned]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[NumberCarsOwned]"
+                      name="NumberCarsOwned" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[AddressLine1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[AddressLine1]"
+                      name="AddressLine1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[AddressLine2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[AddressLine2]"
+                      name="AddressLine2" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[City]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[State]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[ZIP]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[ZIP]"
+                      name="ZIP" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[Phone]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[Phone]"
+                      name="Phone" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Erro de Origem do Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarefa Fluxo de Dados.Paths[Saída de Coluna Derivada]"
+              endId="Package\Tarefa Fluxo de Dados\Clientes.Inputs[Entrada de Destino OLE DB]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem do Excel]"
+              endId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+              name="Saída de Origem do Excel"
+              startId="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS.Outputs[Saída de Origem do Excel]" />
+            <path
+              refId="Package\Tarefa Fluxo de Dados.Paths[Total_Filhos]"
+              endId="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero.Inputs[Entrada de Coluna Derivada]"
+              name="Total_Filhos"
+              startId="Package\Tarefa Fluxo de Dados\Divisão Condicional.Outputs[Total_Filhos]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição]"
+      DTS:CreationName=""
+      DTS:DTSID="{BBDFD9A6-B300-459C-AEF6-440EC2CE2AE2}"
+      DTS:From="Package\Tarefa Executar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição"
+      DTS:To="Package\Tarefa Fluxo de Dados" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarefa Executar SQL"
+          TopLeft="127,93" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarefa Fluxo de Dados"
+          TopLeft="372,93" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição]"
+          TopLeft="303,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69,0"
+              Start="0,0"
+              End="61.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="61.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarefa Fluxo de Dados">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Tarefa Fluxo de Dados\Nome_EstadoCivil_Genero"
+          TopLeft="323,199" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS"
+          TopLeft="90,123" />
+        <NodeLayout
+          Size="116,42"
+          Id="Package\Tarefa Fluxo de Dados\Clientes"
+          TopLeft="110,199" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Tarefa Fluxo de Dados\Divisão Condicional"
+          TopLeft="336,124" />
+        <EdgeLayout
+          Id="Package\Tarefa Fluxo de Dados.Paths[Total_Filhos]"
+          TopLeft="422.75,166">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-27.343671875,7.21875,54.68734375,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem do Excel]"
+          TopLeft="280,144.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="56,0"
+              Start="0,0"
+              End="48.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="48.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarefa Fluxo de Dados.Paths[Saída de Coluna Derivada]"
+          TopLeft="323,220">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-97,0"
+              Start="0,0"
+              End="-89.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-89.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarefa Fluxo de Dados\PLANILHA CUSTOMERS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarefa Fluxo de Dados\Clientes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

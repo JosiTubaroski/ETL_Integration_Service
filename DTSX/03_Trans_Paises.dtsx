@@ -1,0 +1,541 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/26/2020 11:56:44 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-74VND56R"
+  DTS:CreatorName="LAPTOP-74VND56R\Josi"
+  DTS:Description="Descrição de Pacotes SSIS"
+  DTS:DTSID="{EB5F83F2-9CE4-409C-91C3-A844F88AB625}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1046"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Novo Pacote"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{77BDC1AA-9412-46FB-84C9-160708D00AB5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{59071BE0-9908-48EC-A82A-9823AB66B698}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-74VND56R\JOSISQLSERVER;Initial Catalog=PRJ_INTEGRATION;Provider=SQLOLEDB;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{45E35919-3B17-47EF-9B07-14F5A3D88EBE}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=C:\Users\Josi\Desktop\04.Estudo\03_Banco_Dados\02.ETLs\03_Usando_Wizard\dbdemos.mdb;OLE DB SERVICES=0;Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa Fluxo de Dados 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{C590AF6C-3CFA-4447-8231-3066EDD987DA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa Fluxo de Dados 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarefa Fluxo de Dados 1\Destino - country"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Destino - country"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[country]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].Columns[Capital]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Capital"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Capital]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Capital]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].Columns[Continent]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Continent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Continent]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Continent]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].Columns[Area]"
+                      cachedDataType="r8"
+                      cachedName="Area"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Area]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Area]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].Columns[Population]"
+                      cachedDataType="r8"
+                      cachedName="Population"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Population]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Population]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="24"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Capital]"
+                      dataType="wstr"
+                      length="24"
+                      name="Capital" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Continent]"
+                      dataType="wstr"
+                      length="24"
+                      name="Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Area]"
+                      dataType="r8"
+                      name="Area" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input].ExternalColumns[Population]"
+                      dataType="r8"
+                      name="Population" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Destino - country.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Destino - country.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Destino - country.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarefa Fluxo de Dados 1\Origem - country"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation;  Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+              description="Origem OLE DB"
+              name="Origem - country"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">country</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB]"
+                  name="Saída de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Name]"
+                      length="24"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Capital]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Capital]"
+                      length="24"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Capital]"
+                      name="Capital"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Continent]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Continent]"
+                      length="24"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Continent]"
+                      name="Continent"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Area]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Area]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Area]"
+                      name="Area"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Population]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Population]"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].Columns[Population]"
+                      name="Population"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="24"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Capital]"
+                      dataType="wstr"
+                      length="24"
+                      name="Capital" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Continent]"
+                      dataType="wstr"
+                      length="24"
+                      name="Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Area]"
+                      dataType="r8"
+                      name="Area" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB].ExternalColumns[Population]"
+                      dataType="r8"
+                      name="Population" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Name]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Capital]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Capital]"
+                      name="Capital" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Continent]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Continent]"
+                      name="Continent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Area]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Area]"
+                      name="Area" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Population]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[Population]"
+                      name="Population" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarefa Fluxo de Dados 1.Paths[Saída de Origem OLE DB]"
+              endId="Package\Tarefa Fluxo de Dados 1\Destino - country.Inputs[Destination Input]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Tarefa Fluxo de Dados 1\Origem - country.Outputs[Saída de Origem OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa SQL de Preparação 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{EF1D7DAA-D829-4C7D-BD96-E8BA6D9B7EA2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa SQL de Preparação 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{59071BE0-9908-48EC-A82A-9823AB66B698}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[country] (&#xA;[Name] nvarchar(24),&#xA;[Capital] nvarchar(24),&#xA;[Continent] nvarchar(24),&#xA;[Area] float,&#xA;[Population] float&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{1A80504E-48CC-4DF1-9425-C1A3AA63FEF9\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{1A80504E-48CC-4DF1-9425-C1A3AA63FEF9}"
+      DTS:From="Package\Tarefa SQL de Preparação 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{1A80504E-48CC-4DF1-9425-C1A3AA63FEF9}"
+      DTS:To="Package\Tarefa Fluxo de Dados 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Tarefa Fluxo de Dados 1"
+          TopLeft="310,78.5" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Tarefa SQL de Preparação 1"
+          TopLeft="16.5,74.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{1A80504E-48CC-4DF1-9425-C1A3AA63FEF9\}]"
+          TopLeft="227.5,97.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="82.5,0"
+              Start="0,0"
+              End="75,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="75,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarefa Fluxo de Dados 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Tarefa Fluxo de Dados 1\Destino - country"
+          TopLeft="225.5,112.5" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Tarefa Fluxo de Dados 1\Origem - country"
+          TopLeft="6.00000000000001,5.5" />
+        <EdgeLayout
+          Id="Package\Tarefa Fluxo de Dados 1.Paths[Saída de Origem OLE DB]"
+          TopLeft="85.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="220,65"
+              Start="0,0"
+              End="220,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="4,32.5" />
+                  <mssgle:LineSegment
+                    End="216,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="216,32.5"
+                    Point2="220,32.5"
+                    Point3="220,36.5" />
+                  <mssgle:LineSegment
+                    End="220,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

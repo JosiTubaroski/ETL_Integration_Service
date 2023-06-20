@@ -1,0 +1,1525 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/29/2020 11:23:17 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-74VND56R"
+  DTS:CreatorName="LAPTOP-74VND56R\Josi"
+  DTS:DTSID="{1EFA54C8-911F-43F8-BAD2-8599DA48CF49}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{79B77228-82A4-4977-AB4D-8F52A6E73B6C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2D00723C-0A7D-4898-AF28-D064B5C02527}"
+      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Josi\Desktop\04.Estudo\03_Banco_Dados\02.ETLs\05_Transferindo_Dados\09_Recebe_ClientesCA.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{9A3852EE-7056-4C52-94C6-E9196B6AEC8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{7BF5C9F8-A10E-40A4-B33E-EC3A08A508CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalChildren"
+              DTS:DTSID="{C026642D-1269-4F5C-82CD-903EF152F70F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Education"
+              DTS:DTSID="{4D5B480E-8BDB-4C35-838E-C19A0A66576E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{D1B35E90-4EB2-412A-A916-F7DCE042760A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{3BB1086F-E87D-40AC-B4DA-3486D6AA2B42}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{5A845D49-EBB2-4144-94A3-73EAE39CAB49}"
+      DTS:ObjectName="Gerenciador de Conexões do Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\Josi\Desktop\04.Estudo\03_Banco_Dados\02.ETLs\05_Transferindo_Dados\Customers.xls;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões do Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{E1AE2BE6-B50B-46AB-85C6-D49E4E22E6C7}"
+      DTS:ObjectName="Gerenciador de Conexões do Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Josi\Desktop\04.Estudo\03_Banco_Dados\02.ETLs\05_Transferindo_Dados\09_Recebe_ClientesAZ.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[JOSISQLSERVER.Clientes_AL]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3F5B2CFA-F45C-4E3F-ABE2-52830F0B1F33}"
+      DTS:ObjectName="JOSISQLSERVER.Clientes_AL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-74VND56R\JOSISQLSERVER;Initial Catalog=Clientes_AL;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Separar_Destino_Por_Estado"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{85F77CAC-5235-4C96-B22C-D163B229A0D7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Separar_Destino_Por_Estado"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de Arquivo Simples"
+              localeId="1046"
+              name="Destino de Arquivo Simples"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se os dados substituirão o arquivo de destino ou serão anexados a ele."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica o texto a ser gravado no arquivo de destino antes da gravação de quaisquer dados."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando o qualificador de texto está habilitado, ele especifica se o qualificador de texto nos dados gravados no arquivo de destino serão de saída ou não."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples]"
+                  hasSideEffects="true"
+                  name="Entrada de Destino de Arquivo Simples">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[FirstName]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[LastName]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[TotalChildren]"
+                      cachedDataType="r8"
+                      cachedName="TotalChildren"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[TotalChildren]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[TotalChildren]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[Education]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Education"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Education]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[Education]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[City]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[State]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[TotalChildren]"
+                      dataType="r8"
+                      name="TotalChildren" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Education]"
+                      dataType="wstr"
+                      length="255"
+                      name="Education" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="255"
+                      name="State" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Separar_Destino_Por_Estado\Destino do Excel"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Destino do Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Destino do Excel"
+              name="Destino do Excel"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">Clientes_AZ$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões do Excel 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões do Excel 1]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino do Excel">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[FirstName]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[LastName]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].Columns[TotalChildren]"
+                      cachedDataType="r8"
+                      cachedName="TotalChildren"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[TotalChildren]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[TotalChildren]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].Columns[Education]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Education"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[Education]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[Education]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[City]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[State]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[TotalChildren]"
+                      dataType="wstr"
+                      length="255"
+                      name="TotalChildren" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[Education]"
+                      dataType="wstr"
+                      length="255"
+                      name="Education" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="255"
+                      name="State" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Outputs[Saída de Erro de Destino do Excel]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino do Excel"
+                  synchronousInputId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Outputs[Saída de Erro de Destino do Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Destino do Excel.Outputs[Saída de Erro de Destino do Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino do Excel.Outputs[Saída de Erro de Destino do Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Destino do Excel.Outputs[Saída de Erro de Destino do Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Separar_Destino_Por_Estado\Destino OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Destino OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[CLI_AL]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[JOSISQLSERVER.Clientes_AL]"
+                  connectionManagerRefId="Package.ConnectionManagers[JOSISQLSERVER.Clientes_AL]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[FirstName]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[LastName]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[TotalChildren]"
+                      cachedDataType="r8"
+                      cachedName="TotalChildren"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[TotalChildren]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[TotalChildren]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Education]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Education"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Education]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[Education]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[City]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[State]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[TotalChildren]"
+                      dataType="r8"
+                      name="TotalChildren" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Education]"
+                      dataType="wstr"
+                      length="255"
+                      name="Education" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="255"
+                      name="State" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Destino OLE DB 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[Clientes_CO]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[JOSISQLSERVER.Clientes_AL]"
+                  connectionManagerRefId="Package.ConnectionManagers[JOSISQLSERVER.Clientes_AL]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[FirstName]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[LastName]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].Columns[TotalChildren]"
+                      cachedDataType="r8"
+                      cachedName="TotalChildren"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[TotalChildren]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[TotalChildren]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].Columns[Education]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Education"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[Education]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[Education]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[City]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[State]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[TotalChildren]"
+                      dataType="r8"
+                      name="TotalChildren" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[Education]"
+                      dataType="wstr"
+                      length="255"
+                      name="Education" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="255"
+                      name="State" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Separar_Destino_Por_Estado\Divisão Condicional"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Divisão Condicional;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Encaminha colunas de dados para saídas diferentes, dependendo do conteúdo dos dados. Use condições (expressões do SSIS) para especificar quais linhas são encaminhadas. Por exemplo, separe os registros que precisam ser limpos daqueles que estão prontos para serem carregados ou encaminhe somente um subconjunto de registros."
+              name="Divisão Condicional"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  description="Entrada para a Transformação Divisão Condicional"
+                  name="Entrada de Divisão Condicional">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Inputs[Entrada de Divisão Condicional].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="State"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Estado_AL]"
+                  description="Saída 1 da Transformação Divisão Condicional"
+                  errorOrTruncationOperation="Computação"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Estado_AL"
+                  synchronousInputId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
+                      name="Expression">#{Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]} == "AL"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
+                      expressionType="Notify"
+                      name="FriendlyExpression">State == "AL"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Estado_AZ]"
+                  description="Saída 2 da Transformação Divisão Condicional"
+                  errorOrTruncationOperation="Computação"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Estado_AZ"
+                  synchronousInputId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
+                      name="Expression">#{Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]} == "AZ"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
+                      expressionType="Notify"
+                      name="FriendlyExpression">State == "AZ"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Estado_CA]"
+                  description="Saída 3 da Transformação Divisão Condicional"
+                  errorOrTruncationOperation="Computação"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Estado_CA"
+                  synchronousInputId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
+                      name="Expression">#{Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]} == "CA"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
+                      expressionType="Notify"
+                      name="FriendlyExpression">State == "CA"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Estado_CO]"
+                  description="Saída 4 da Transformação Divisão Condicional"
+                  errorOrTruncationOperation="Computação"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Estado_CO"
+                  synchronousInputId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
+                      name="Expression">#{Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]} == "CO"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
+                      expressionType="Notify"
+                      name="FriendlyExpression">State == "CO"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
+                      name="EvaluationOrder">3</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Saída Padrão de Divisão Condicional]"
+                  description="Saída Padrão da Transformação Divisão Condicional"
+                  exclusionGroup="1"
+                  name="Saída Padrão de Divisão Condicional"
+                  synchronousInputId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Inputs[Entrada de Divisão Condicional]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional]"
+                  description="Saída de Erro da Transformação Divisão Condicional"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Divisão Condicional"
+                  synchronousInputId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Inputs[Entrada de Divisão Condicional]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Separar_Destino_Por_Estado\Origem do Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origem do Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem do Excel"
+              name="Origem do Excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">Customers$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="O mapeamento de parâmetros no comando SQL para variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel]"
+                  name="Saída de Origem do Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[FirstName]"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[LastName]"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[TotalChildren]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[TotalChildren]"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[TotalChildren]"
+                      name="TotalChildren"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[Education]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[Education]"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[Education]"
+                      name="Education"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[City]"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[State]"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[MiddleInitial]"
+                      dataType="wstr"
+                      length="255"
+                      name="MiddleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[BirthDate]"
+                      dataType="date"
+                      name="BirthDate" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[MaritalStatus]"
+                      dataType="wstr"
+                      length="255"
+                      name="MaritalStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="255"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[EmailAddress]"
+                      dataType="wstr"
+                      length="255"
+                      name="EmailAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[YearlyIncome]"
+                      dataType="r8"
+                      name="YearlyIncome" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[TotalChildren]"
+                      dataType="r8"
+                      name="TotalChildren" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[NumberChildrenAtHome]"
+                      dataType="r8"
+                      name="NumberChildrenAtHome" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[Education]"
+                      dataType="wstr"
+                      length="255"
+                      name="Education" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[Occupation]"
+                      dataType="wstr"
+                      length="255"
+                      name="Occupation" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[HouseOwnerFlag]"
+                      dataType="r8"
+                      name="HouseOwnerFlag" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[NumberCarsOwned]"
+                      dataType="r8"
+                      name="NumberCarsOwned" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[AddressLine1]"
+                      dataType="wstr"
+                      length="255"
+                      name="AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[AddressLine2]"
+                      dataType="wstr"
+                      length="255"
+                      name="AddressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="255"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[ZIP]"
+                      dataType="r8"
+                      name="ZIP" />
+                    <externalMetadataColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="255"
+                      name="Phone" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem do Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[LastName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[TotalChildren]"
+                      dataType="r8"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[TotalChildren]"
+                      name="TotalChildren" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[Education]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[Education]"
+                      name="Education" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[City]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[State]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Erro de Origem do Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Separar_Destino_Por_Estado.Paths[Estado_AL]"
+              endId="Package\Separar_Destino_Por_Estado\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+              name="Estado_AL"
+              startId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Estado_AL]" />
+            <path
+              refId="Package\Separar_Destino_Por_Estado.Paths[Estado_AZ]"
+              endId="Package\Separar_Destino_Por_Estado\Destino do Excel.Inputs[Entrada de Destino do Excel]"
+              name="Estado_AZ"
+              startId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Estado_AZ]" />
+            <path
+              refId="Package\Separar_Destino_Por_Estado.Paths[Estado_CA]"
+              endId="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples]"
+              name="Estado_CA"
+              startId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Estado_CA]" />
+            <path
+              refId="Package\Separar_Destino_Por_Estado.Paths[Estado_CO]"
+              endId="Package\Separar_Destino_Por_Estado\Destino OLE DB 1.Inputs[Entrada de Destino OLE DB]"
+              name="Estado_CO"
+              startId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Outputs[Estado_CO]" />
+            <path
+              refId="Package\Separar_Destino_Por_Estado.Paths[Saída de Origem do Excel]"
+              endId="Package\Separar_Destino_Por_Estado\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+              name="Saída de Origem do Excel"
+              startId="Package\Separar_Destino_Por_Estado\Origem do Excel.Outputs[Saída de Origem do Excel]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Separar_Destino_Por_Estado"
+          TopLeft="140,62" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Separar_Destino_Por_Estado">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Separar_Destino_Por_Estado\Origem do Excel"
+          TopLeft="453,5.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Separar_Destino_Por_Estado\Divisão Condicional"
+          TopLeft="446,107.5" />
+        <EdgeLayout
+          Id="Package\Separar_Destino_Por_Estado.Paths[Saída de Origem do Excel]"
+          TopLeft="531,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Separar_Destino_Por_Estado\Destino OLE DB"
+          TopLeft="5.49999999999989,210" />
+        <EdgeLayout
+          Id="Package\Separar_Destino_Por_Estado.Paths[Estado_AL]"
+          TopLeft="482.4,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-400.4,60.5"
+              Start="0,0"
+              End="-400.4,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.1400329489292" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.1400329489292"
+                    Point2="0,18.1400329489292"
+                    Point3="-4,18.1400329489292" />
+                  <mssgle:LineSegment
+                    End="-396.4,18.1400329489292" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-396.4,18.1400329489292"
+                    Point2="-400.4,18.1400329489292"
+                    Point3="-400.4,22.1400329489292" />
+                  <mssgle:LineSegment
+                    End="-400.4,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-223.84693359375,23.1400329489292,47.2938671875,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Separar_Destino_Por_Estado\Destino do Excel"
+          TopLeft="219.5,210" />
+        <EdgeLayout
+          Id="Package\Separar_Destino_Por_Estado.Paths[Estado_AZ]"
+          TopLeft="514.8,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-216.8,60.5"
+              Start="0,0"
+              End="-216.8,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.0637191157347" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.0637191157347"
+                    Point2="0,27.0637191157347"
+                    Point3="-4,27.0637191157347" />
+                  <mssgle:LineSegment
+                    End="-212.8,27.0637191157347" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-212.8,27.0637191157347"
+                    Point2="-216.8,27.0637191157347"
+                    Point3="-216.8,31.0637191157347" />
+                  <mssgle:LineSegment
+                    End="-216.8,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-132.25689453125,32.0637191157347,47.7137890625,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Separar_Destino_Por_Estado\Destino de Arquivo Simples"
+          TopLeft="437.5,210" />
+        <EdgeLayout
+          Id="Package\Separar_Destino_Por_Estado.Paths[Estado_CA]"
+          TopLeft="547.2,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.2,60.5"
+              Start="0,0"
+              End="-16.2,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.0637191157347" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.0637191157347"
+                    Point2="0,27.0637191157347"
+                    Point3="-4,27.0637191157347" />
+                  <mssgle:LineSegment
+                    End="-12.2,27.0637191157347" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.2,27.0637191157347"
+                    Point2="-16.2,27.0637191157347"
+                    Point3="-16.2,31.0637191157347" />
+                  <mssgle:LineSegment
+                    End="-16.2,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-32.29880859375,32.0637191157347,48.3976171875,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Separar_Destino_Por_Estado\Destino OLE DB 1"
+          TopLeft="685.5,210" />
+        <EdgeLayout
+          Id="Package\Separar_Destino_Por_Estado.Paths[Estado_CO]"
+          TopLeft="579.6,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="187.4,60.4999999999999"
+              Start="0,0"
+              End="187.4,52.9999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.1400329489291" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.1400329489291"
+                    Point2="0,18.1400329489291"
+                    Point3="4,18.1400329489291" />
+                  <mssgle:LineSegment
+                    End="183.4,18.1400329489291" />
+                  <mssgle:CubicBezierSegment
+                    Point1="183.4,18.1400329489291"
+                    Point2="187.4,18.1400329489291"
+                    Point3="187.4,22.1400329489291" />
+                  <mssgle:LineSegment
+                    End="187.4,52.9999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="69.1471875,23.1400329489291,49.105625,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Exercicio: Pegar os seguintes campos do Excel Custumers.&#xD;&#xA;Nome e Sobrenome, Education, Total Filhos, City, State.&#xD;&#xA;Definir dstinos onde:&#xD;&#xA;1 - AL - Banco de Dados Clientes_AL - Tabela CLI_AL&#xD;&#xA;2 - AZ - Planilha do Excel&#xD;&#xA;3 - CA - CA Arquivo Comum&#xD;&#xA;4 - CO - Livre"
+          ParentId="647a3fd6-7829-474e-adef-847dfb605025"
+          FontInfo="{assembly:Null}"
+          Size="333,136"
+          Id="bfc0992d-8cab-4f18-9bba-dce9d63306b2"
+          TopLeft="3.5,40.5" />
+        <GroupLayout
+          Text="Objetivo do Pacote"
+          ParentId="Package\Separar_Destino_Por_Estado"
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="342,227"
+          Size="127,43"
+          Id="647a3fd6-7829-474e-adef-847dfb605025"
+          TopLeft="72,32.4999999999999">
+          <GroupLayout.ChildrenIds>
+            <s:String>bfc0992d-8cab-4f18-9bba-dce9d63306b2</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Separar_Destino_Por_Estado\Origem do Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Separar_Destino_Por_Estado\Destino OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Separar_Destino_Por_Estado\Destino do Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Separar_Destino_Por_Estado\Destino OLE DB 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

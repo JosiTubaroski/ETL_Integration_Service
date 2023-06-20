@@ -1,0 +1,939 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/30/2020 12:58:59 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-74VND56R"
+  DTS:CreatorName="LAPTOP-74VND56R\Josi"
+  DTS:DTSID="{C610FA15-0BE8-4C08-8A3F-6A25C800CD99}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{5CDD5F14-0663-42D3-9B6E-D856CDB5FEE9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Event_Log]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{5D87A569-111A-42EF-80C0-F068DC316055}"
+      DTS:ObjectName="Event_Log">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\Josi\Desktop\04.Estudo\03_Banco_Dados\02.ETLs\07_Troubleshooting\Event_Log" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[JOSISQLSERVER.EVENT_LOG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8523E8A9-5D42-42EF-B863-ED48BD01DBD7}"
+      DTS:ObjectName="JOSISQLSERVER.EVENT_LOG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-74VND56R\JOSISQLSERVER;Initial Catalog=EVENT_LOG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WRT_CLIENTE_LOG]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7DFDFE7A-260C-4C92-AA6E-5F88B4EC3742}"
+      DTS:ObjectName="WRT_CLIENTE_LOG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Josi\Desktop\04.Estudo\03_Banco_Dados\02.ETLs\06_Anali_BancoDados\WRT_CLIENTE_LOG.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID_CLIENTE"
+              DTS:DTSID="{3236E34B-C8BC-4092-8237-1ACE4571EB58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NOME"
+              DTS:DTSID="{DC38E40E-2DCA-494D-A382-973018A832E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SOBRENOME"
+              DTS:DTSID="{D9290D4B-93C6-4E89-8750-BB5199306D34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEXO"
+              DTS:DTSID="{A320A95F-D383-4540-93DF-7DEA3C5221C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EMAIL"
+              DTS:DTSID="{659F14BF-6C54-4435-806D-E7E84DEF199A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="Event_Log"
+      DTS:CreationName="Microsoft.LogProviderTextFile"
+      DTS:Description="Grava entradas no log de eventos em um arquivo CSV"
+      DTS:DTSID="{2A5E8429-84BD-4721-B38D-BF8D05A4D885}"
+      DTS:ObjectName="Provedor de log SSIS log para arquivos de Texto">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+    <DTS:LogProvider
+      DTS:CreationName="Microsoft.LogProviderEventLog"
+      DTS:Description="Grava entradas no Log de Eventos"
+      DTS:DTSID="{28E39319-507B-42E4-A7B7-E6546617BCF9}"
+      DTS:ObjectName="Provedor de log SSIS para o Log de Eventos do Windows">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">2,7,OnError,9,OnWarning</DTS:Property>
+    <DTS:Property
+      DTS:EventName="Diagnostic"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="DiagnosticEx"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnExecStatusChanged"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnInformation"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePostComponentCall"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePostEndOfRowset"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePostPrimeOutput"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePreComponentCall"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePreEndOfRowset"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePrePrimeOutput"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelineRowsSent"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostValidate"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPreExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPreValidate"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnProgress"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnQueryCancel"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnTaskFailed"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnVariableValueChanged"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnWarning"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{2A5E8429-84BD-4721-B38D-BF8D05A4D885}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Le DB EVENT_LOG"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{741BF413-6DC3-4CFB-B0C9-241624A5A8BC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Le DB EVENT_LOG"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de Arquivo Simples"
+              localeId="1046"
+              name="CRIA ARQUIVO"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se os dados substituirão o arquivo de destino ou serão anexados a ele."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica o texto a ser gravado no arquivo de destino antes da gravação de quaisquer dados."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando o qualificador de texto está habilitado, ele especifica se o qualificador de texto nos dados gravados no arquivo de destino serão de saída ou não."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[WRT_CLIENTE_LOG]"
+                  connectionManagerRefId="Package.ConnectionManagers[WRT_CLIENTE_LOG]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples]"
+                  hasSideEffects="true"
+                  name="Entrada de Destino de Arquivo Simples">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].Columns[ID_CLIENTE]"
+                      cachedDataType="i4"
+                      cachedName="ID_CLIENTE"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[ID_CLIENTE]"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[ID_CLIENTE]" />
+                    <inputColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].Columns[NOME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NOME"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[NOME]"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[NOME]" />
+                    <inputColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].Columns[SOBRENOME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SOBRENOME"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[SOBRENOME]"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[SOBRENOME]" />
+                    <inputColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].Columns[SEXO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SEXO"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[SEXO]"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[SEXO]" />
+                    <inputColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].Columns[EMAIL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EMAIL"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[EMAIL]"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[EMAIL]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[ID_CLIENTE]"
+                      dataType="i4"
+                      name="ID_CLIENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[NOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME" />
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[SOBRENOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SOBRENOME" />
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[SEXO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SEXO" />
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[EMAIL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EMAIL" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Le DB EVENT_LOG\TABELA CLIENTE"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+              description="Origem OLE DB"
+              name="TABELA CLIENTE"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[CLIENTE]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[JOSISQLSERVER.EVENT_LOG]"
+                  connectionManagerRefId="Package.ConnectionManagers[JOSISQLSERVER.EVENT_LOG]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB]"
+                  name="Saída de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[ID_CLIENTE]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_CLIENTE]"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[ID_CLIENTE]"
+                      name="ID_CLIENTE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[NOME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[NOME]"
+                      length="50"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[NOME]"
+                      name="NOME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[SOBRENOME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[SOBRENOME]"
+                      length="50"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[SOBRENOME]"
+                      name="SOBRENOME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[SEXO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[SEXO]"
+                      length="50"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[SEXO]"
+                      name="SEXO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[EMAIL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[EMAIL]"
+                      length="50"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].Columns[EMAIL]"
+                      name="EMAIL"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_CLIENTE]"
+                      dataType="i4"
+                      name="ID_CLIENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[NOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NOME" />
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[SOBRENOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SOBRENOME" />
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[SEXO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SEXO" />
+                    <externalMetadataColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[EMAIL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EMAIL" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_CLIENTE]"
+                      dataType="i4"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_CLIENTE]"
+                      name="ID_CLIENTE" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[NOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[NOME]"
+                      name="NOME" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[SOBRENOME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[SOBRENOME]"
+                      name="SOBRENOME" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[SEXO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[SEXO]"
+                      name="SEXO" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[EMAIL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[EMAIL]"
+                      name="EMAIL" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Le DB EVENT_LOG.Paths[Saída de Origem OLE DB]"
+              endId="Package\Le DB EVENT_LOG\CRIA ARQUIVO.Inputs[Entrada de Destino de Arquivo Simples]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Le DB EVENT_LOG\TABELA CLIENTE.Outputs[Saída de Origem OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Le DB EVENT_LOG"
+          TopLeft="44,38" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Le DB EVENT_LOG">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Le DB EVENT_LOG\TABELA CLIENTE"
+          TopLeft="107,34" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Le DB EVENT_LOG\CRIA ARQUIVO"
+          TopLeft="435,68" />
+        <EdgeLayout
+          Id="Package\Le DB EVENT_LOG.Paths[Saída de Origem OLE DB]"
+          TopLeft="267,55">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="168,34"
+              Start="0,0"
+              End="160.5,34">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="80,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="80,0"
+                    Point2="84,0"
+                    Point3="84,4" />
+                  <mssgle:LineSegment
+                    End="84,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="84,30"
+                    Point2="84,34"
+                    Point3="88,34" />
+                  <mssgle:LineSegment
+                    End="160.5,34" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Le DB EVENT_LOG\TABELA CLIENTE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

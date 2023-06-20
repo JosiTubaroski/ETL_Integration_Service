@@ -1,0 +1,870 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/27/2020 2:53:49 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-74VND56R"
+  DTS:CreatorName="LAPTOP-74VND56R\Josi"
+  DTS:DTSID="{E48B0417-DD2A-4E26-BC3D-2C9C353F7728}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{15DFB18B-B312-4196-BAA5-6AB956191B88}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Escrever_Produtos_PROMO]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Escrever os produtos que estavam em Promoção"
+      DTS:DTSID="{29401049-EAA2-48CD-B979-E90B17C7431F}"
+      DTS:ObjectName="Escrever_Produtos_PROMO">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Dados\Prod_Promocao.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Produto"
+              DTS:DTSID="{D1EB6D7F-809E-4184-930C-3EE733CDDFF3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Categoria"
+              DTS:DTSID="{A5F498C4-EE18-450F-9BCE-0C590301A973}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Valor"
+              DTS:DTSID="{E3D8246B-F200-46AB-893F-1D726FB1BA1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Promocao"
+              DTS:DTSID="{819FB21A-72C4-4599-B8F8-640FF13318CC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Condicional Split"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{7D9E0DA7-8502-4EDD-88F2-601390925545}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Condicional Split"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Condicional Split\Destino OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Destino OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[N_Promocao]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Condicional Split\Destino OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{C836EB32-2D6E-4D87-9DF6-9C620E0FC55C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Conector_BancoDados]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Produto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Produto"
+                      externalMetadataColumnId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Produto]"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Produto]" />
+                    <inputColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Categoria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Categoria"
+                      externalMetadataColumnId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Categoria]"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Categoria]" />
+                    <inputColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Valor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Valor"
+                      externalMetadataColumnId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Valor]"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Valor]" />
+                    <inputColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Promocao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Promocao"
+                      externalMetadataColumnId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Promocao]"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Promocao]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Produto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Produto" />
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Categoria]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Categoria" />
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Valor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Valor" />
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Promocao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Promocao" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Condicional Split\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Condicional Split\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Condicional Split\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Condicional Split\Divisão Condicional"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Divisão Condicional;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Encaminha colunas de dados para saídas diferentes, dependendo do conteúdo dos dados. Use condições (expressões do SSIS) para especificar quais linhas são encaminhadas. Por exemplo, separe os registros que precisam ser limpos daqueles que estão prontos para serem carregados ou encaminhe somente um subconjunto de registros."
+              name="Divisão Condicional"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Condicional Split\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  description="Entrada para a Transformação Divisão Condicional"
+                  name="Entrada de Divisão Condicional">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Condicional Split\Divisão Condicional.Inputs[Entrada de Divisão Condicional].Columns[Promocao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Promocao"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Promocao]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Condicional Split\Divisão Condicional.Outputs[S_Promocao]"
+                  description="Saída 1 da Transformação Divisão Condicional"
+                  errorOrTruncationOperation="Computação"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="S_Promocao"
+                  synchronousInputId="Package\Condicional Split\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
+                      name="Expression">#{Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Promocao]} == "S"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Promocao == "S"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Condicional Split\Divisão Condicional.Outputs[N_Promocao]"
+                  description="Saída 2 da Transformação Divisão Condicional"
+                  errorOrTruncationOperation="Computação"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="N_Promocao"
+                  synchronousInputId="Package\Condicional Split\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
+                      name="Expression">#{Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Promocao]} == "N"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Promocao == "N"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Condicional Split\Divisão Condicional.Outputs[Saída Padrão de Divisão Condicional]"
+                  description="Saída Padrão da Transformação Divisão Condicional"
+                  exclusionGroup="1"
+                  name="Saída Padrão de Divisão Condicional"
+                  synchronousInputId="Package\Condicional Split\Divisão Condicional.Inputs[Entrada de Divisão Condicional]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Condicional Split\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional]"
+                  description="Saída de Erro da Transformação Divisão Condicional"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Divisão Condicional"
+                  synchronousInputId="Package\Condicional Split\Divisão Condicional.Inputs[Entrada de Divisão Condicional]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Condicional Split\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Condicional Split\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Condicional Split\Divisão Condicional.Outputs[Saída de Erro de Divisão Condicional].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Condicional Split\Origem OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+              description="Origem OLE DB"
+              name="Origem OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[Produtos]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Condicional Split\Origem OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{C836EB32-2D6E-4D87-9DF6-9C620E0FC55C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Conector_BancoDados]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB]"
+                  name="Saída de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Produto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Produto]"
+                      length="50"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Produto]"
+                      name="Produto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Categoria]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Categoria]"
+                      length="50"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Categoria]"
+                      name="Categoria"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Valor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Valor]"
+                      length="50"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Valor]"
+                      name="Valor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Promocao]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Promocao]"
+                      length="50"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Promocao]"
+                      name="Promocao"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Produto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Produto" />
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Categoria]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Categoria" />
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Valor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Valor" />
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Promocao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Promocao" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Produto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Produto]"
+                      name="Produto" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Categoria]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Categoria]"
+                      name="Categoria" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Valor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Valor]"
+                      name="Valor" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Promocao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Promocao]"
+                      name="Promocao" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Condicional Split\Prod_Promocao"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de Arquivo Simples"
+              localeId="1046"
+              name="Prod_Promocao"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se os dados substituirão o arquivo de destino ou serão anexados a ele."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica o texto a ser gravado no arquivo de destino antes da gravação de quaisquer dados."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando o qualificador de texto está habilitado, ele especifica se o qualificador de texto nos dados gravados no arquivo de destino serão de saída ou não."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Condicional Split\Prod_Promocao.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Escrever_Produtos_PROMO]"
+                  connectionManagerRefId="Package.ConnectionManagers[Escrever_Produtos_PROMO]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples]"
+                  hasSideEffects="true"
+                  name="Entrada de Destino de Arquivo Simples">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].Columns[Produto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Produto"
+                      externalMetadataColumnId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Produto]"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Produto]" />
+                    <inputColumn
+                      refId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].Columns[Categoria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Categoria"
+                      externalMetadataColumnId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Categoria]"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Categoria]" />
+                    <inputColumn
+                      refId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].Columns[Valor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Valor"
+                      externalMetadataColumnId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Valor]"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Valor]" />
+                    <inputColumn
+                      refId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].Columns[Promocao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Promocao"
+                      externalMetadataColumnId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Promocao]"
+                      lineageId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Promocao]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Produto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Produto" />
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Categoria]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Categoria" />
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Valor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Valor" />
+                    <externalMetadataColumn
+                      refId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Promocao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Promocao" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Condicional Split.Paths[N_Promocao]"
+              endId="Package\Condicional Split\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+              name="N_Promocao"
+              startId="Package\Condicional Split\Divisão Condicional.Outputs[N_Promocao]" />
+            <path
+              refId="Package\Condicional Split.Paths[Saída de Origem OLE DB]"
+              endId="Package\Condicional Split\Divisão Condicional.Inputs[Entrada de Divisão Condicional]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Condicional Split\Origem OLE DB.Outputs[Saída de Origem OLE DB]" />
+            <path
+              refId="Package\Condicional Split.Paths[S_Promocao]"
+              endId="Package\Condicional Split\Prod_Promocao.Inputs[Entrada de Destino de Arquivo Simples]"
+              name="S_Promocao"
+              startId="Package\Condicional Split\Divisão Condicional.Outputs[S_Promocao]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Condicional Split"
+          TopLeft="88,98" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Condicional Split">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:s="clr-namespace:System;assembly=mscorlib">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Condicional Split\Origem OLE DB"
+          TopLeft="220,5.49999999999989" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Condicional Split\Divisão Condicional"
+          TopLeft="211,107.5" />
+        <EdgeLayout
+          Id="Package\Condicional Split.Paths[Saída de Origem OLE DB]"
+          TopLeft="296,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Condicional Split\Prod_Promocao"
+          TopLeft="5.5,210" />
+        <EdgeLayout
+          Id="Package\Condicional Split.Paths[S_Promocao]"
+          TopLeft="269,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-187,60.5000000000001"
+              Start="0,0"
+              End="-187,53.0000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5384615384616" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5384615384616"
+                    Point2="0,24.5384615384616"
+                    Point3="-4,24.5384615384616" />
+                  <mssgle:LineSegment
+                    End="-183,24.5384615384616" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-183,24.5384615384616"
+                    Point2="-187,24.5384615384616"
+                    Point3="-187,28.5384615384616" />
+                  <mssgle:LineSegment
+                    End="-187,53.0000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-121.5176953125,29.5384615384616,56.035390625,10.8671875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Condicional Split\Destino OLE DB"
+          TopLeft="219.5,210" />
+        <EdgeLayout
+          Id="Package\Condicional Split.Paths[N_Promocao]"
+          TopLeft="323,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-27,60.5"
+              Start="0,0"
+              End="-27,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5384615384615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5384615384615"
+                    Point2="0,24.5384615384615"
+                    Point3="-4,24.5384615384615" />
+                  <mssgle:LineSegment
+                    End="-23,24.5384615384615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23,24.5384615384615"
+                    Point2="-27,24.5384615384615"
+                    Point3="-27,28.5384615384615" />
+                  <mssgle:LineSegment
+                    End="-27,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-41.88703125,29.5384615384615,56.7740625,10.7353515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Objetivo: Criar uma lista de produtos promocionais&#xD;&#xA;&#xD;&#xA;Pacote: Conditional Split&#xD;&#xA;&#xD;&#xA;Execução: Lê da base de dados, faz um split pela coluna promoção&#xD;&#xA;e cria um TXT como produtos em Promoção, cria uma tabela com &#xD;&#xA;Produtos que não fazem parte de promoção.&#xD;&#xA;&#xD;&#xA;Conectores: Conector_BancoDados e Escrever_Produtos_PROMO"
+          ParentId="ab9932bd-ae3f-4a12-8cc2-9b0650639c81"
+          Size="381,230"
+          Id="da7afb74-bd64-4849-9f3e-9a7c972314c7"
+          TopLeft="5.5,5.5">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="14.25"
+              Color="#FF800080">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <GroupLayout
+          Text="Documentação do Pacote"
+          ParentId="Package\Condicional Split"
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="392,290"
+          Size="392,43"
+          Id="ab9932bd-ae3f-4a12-8cc2-9b0650639c81"
+          TopLeft="433,209.5">
+          <GroupLayout.ChildrenIds>
+            <s:String>da7afb74-bd64-4849-9f3e-9a7c972314c7</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Condicional Split\Origem OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Condicional Split\Destino OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
