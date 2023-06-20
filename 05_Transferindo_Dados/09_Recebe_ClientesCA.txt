@@ -1,0 +1,963 @@
+Catherine,Gray,2,High Schoo,Burbank,CA
+Catherine,Grey,2,High Schoo,Burbank,CA
+Catherine,Gray,2,High Schoo,Burbank,CA
+Miguel,Lopez,3,High Schoo,Burbank,CA
+Paula,Suarez,3,Partial Co,Burbank,CA
+Andy,Ruiz,2,Graduate D,Burbank,CA
+Jarrod,Sai,4,Bachelors,Burbank,CA
+Christina,Kelly,3,Bachelors,Burbank,CA
+Chris,Kelly,3,Bachelors,Burbank,CA
+Christine,Kelly,3,Bachelors,Burbank,CA
+Sophia,Collins,3,Partial Co,Burlingame,CA
+Matthew,Thompson,2,Graduate D,Burlingame,CA
+Louis,Sharma,4,High Schoo,Burlingame,CA
+Shane,Perez,4,High Schoo,Burlingame,CA
+Cameron,Martin,2,High Schoo,Burlingame,CA
+Misty,Aggarwal,2,Graduate D,Alhambra,CA
+Casey,Bhat,1,Graduate D,Alpine,CA
+Isaac,Hall,1,Graduate D,Altadena,CA
+Allen,Engineer,1,Graduate D,Altadena,CA
+Monique,Alvarez,5,Graduate D,Auburn,CA
+Geoffrey,Engineer,0,Partial Co,Baldwin Park,CA
+Tanya,Hernandez,0,Bachelors,Barstow,CA
+Makayla,Richardson,1,Bachelors,Barstow,CA
+Deborah,Bhat,1,Partial Co,Bell Gardens,CA
+Kristin,Lal,2,High Schoo,Bellflower,CA
+Andre,Fernandez,0,Partial Co,Bellflower,CA
+Priscilla,Jai,0,Graduate D,Bellflower,CA
+Stephanie,Phillips,2,High Schoo,Bellflower,CA
+Frederick,Mehta,2,High Schoo,Bellflower,CA
+Tracy,Anand,4,Partial Co,Bellflower,CA
+Kaitlin,Fernandez,3,Bachelors,Bellflower,CA
+Levi,Srini,5,High Schoo,Bellflower,CA
+Aimee,Xu,0,Partial Hi,Bellflower,CA
+Jerome,Alvarez,0,High Schoo,Bellflower,CA
+Bianca,She,5,Bachelors,Bellflower,CA
+Barbara,Shan,3,Bachelors,Bellflower,CA
+Cassie,Bhat,0,Bachelors,Bellflower,CA
+Nicholas,Miller,0,Partial Hi,Bellflower,CA
+Frederick,Fernandez,2,Partial Co,Bellflower,CA
+Jonathan,Simmons,2,Partial Co,Bellflower,CA
+Kristina,Sanchez,1,Bachelors,Bellflower,CA
+Jason,Turner,1,Partial Co,Bellflower,CA
+Miranda,Perry,4,Graduate D,Bellflower,CA
+Hailey,Wright,4,Graduate D,Bellflower,CA
+Darryl,Zhu,1,Partial Co,Bellflower,CA
+Evan,Morris,1,Partial Co,Bellflower,CA
+Carmen,Rodriguez,0,Bachelors,Bellflower,CA
+Christy,Shen,2,High Schoo,Bellflower,CA
+Dalton,Price,2,Partial Co,Bellflower,CA
+Corey,Xu,0,Bachelors,Bellflower,CA
+Calvin,Pal,2,Partial Co,Berkeley,CA
+Mason,Morgan,2,Partial Co,Berkeley,CA
+Xavier,Phillips,1,Bachelors,Berkeley,CA
+Clarence,Lu,0,Partial Co,Berkeley,CA
+Janelle,Verma,0,Partial Hi,Berkeley,CA
+Luis,Evans,1,Graduate D,Berkeley,CA
+Morgan,Simmons,1,Graduate D,Berkeley,CA
+Sarah,Hayes,1,Graduate D,Berkeley,CA
+Jamie,Gil,1,Graduate D,Berkeley,CA
+Terrance,Patel,1,Bachelors,Berkeley,CA
+Jeremiah,Williams,1,Graduate D,Berkeley,CA
+Alicia,Chande,2,Bachelors,Berkeley,CA
+Lauren,Stewart,1,Graduate D,Berkeley,CA
+Gabriella,Rogers,3,Bachelors,Berkeley,CA
+Bianca,Sun,3,Bachelors,Berkeley,CA
+Lauren,Martin,4,Bachelors,Berkeley,CA
+Marshall,Ma,4,Bachelors,Berkeley,CA
+Sabrina,Ortega,4,High Schoo,Berkeley,CA
+Abby,Srini,4,High Schoo,Berkeley,CA
+Olivia,Bell,4,High Schoo,Berkeley,CA
+Pedro,Castro,1,Partial Co,Berkeley,CA
+Mitchell,Goel,5,Graduate D,Berkeley,CA
+Geoffrey,Prasad,2,Bachelors,Berkeley,CA
+Adam,Yang,4,Graduate D,Berkeley,CA
+Rosa,Xu,2,Bachelors,Berkeley,CA
+Kara,Xie,1,Graduate D,Beverly Hills,CA
+Christine,Lal,3,Bachelors,Beverly Hills,CA
+Jessie,Lin,4,Bachelors,Beverly Hills,CA
+William,Wilson,4,Bachelors,Beverly Hills,CA
+Carson,Ross,3,Graduate D,Beverly Hills,CA
+Mario,Yuan,3,High Schoo,Beverly Hills,CA
+Caroline,Jenkins,4,High Schoo,Beverly Hills,CA
+Melody,Alonso,4,High Schoo,Beverly Hills,CA
+Ross,Gomez,4,High Schoo,Beverly Hills,CA
+Erica,Li,1,Partial Co,Beverly Hills,CA
+Martha,Cai,1,Graduate D,Beverly Hills,CA
+Arturo,Bhat,0,Bachelors,Beverly Hills,CA
+Tammy,Subram,0,Bachelors,Beverly Hills,CA
+Kellie,Jimenez,2,Partial Co,Beverly Hills,CA
+Brendan,Chander,0,Partial Co,Beverly Hills,CA
+Damien,Wu,0,Partial Co,Beverly Hills,CA
+Allen,Verma,0,Partial Co,Burbank,CA
+Eduardo,Washington,0,Partial Co,Burbank,CA
+Lucas,James,0,High Schoo,Burbank,CA
+Zachary,Li,2,Bachelors,Burbank,CA
+Jessie,Gil,1,Bachelors,Burbank,CA
+Jamie,Navarro,5,Partial Co,Burbank,CA
+Karen,Zheng,0,High Schoo,Burbank,CA
+Ryan,White,0,High Schoo,Burbank,CA
+Angel,Collins,0,Partial Hi,Burbank,CA
+Randy,Li,0,Partial Hi,Burbank,CA
+Eduardo,Wright,1,Bachelors,Burbank,CA
+Jasmine,Morgan,4,Graduate D,Burbank,CA
+Kimberly,Morris,5,Bachelors,Burbank,CA
+Brandy,Verma,5,Bachelors,Burbank,CA
+Sheila,Jimenez,4,Bachelors,Burbank,CA
+Candace,Engineer,4,Bachelors,Burbank,CA
+Catherine,Gray,2,High Schoo,Burbank,CA
+Miguel,Lopez,3,High Schoo,Burbank,CA
+Paula,Suarez,3,Partial Co,Burbank,CA
+Andy,Ruiz,2,Graduate D,Burbank,CA
+Jarrod,Sai,4,Bachelors,Burbank,CA
+Christina,Kelly,3,Bachelors,Burbank,CA
+Sophia,Collins,3,Partial Co,Burlingame,CA
+Matthew,Thompson,2,Graduate D,Burlingame,CA
+Louis,Sharma,4,High Schoo,Burlingame,CA
+Shane,Perez,4,High Schoo,Burlingame,CA
+Cameron,Martin,2,High Schoo,Burlingame,CA
+Eddie,Blanco,2,Graduate D,Burlingame,CA
+Trinity,Peterson,5,Partial Co,Burlingame,CA
+Brittney,Yang,1,Graduate D,Burlingame,CA
+Noah,Li,1,Graduate D,Burlingame,CA
+Cameron,Davis,1,Graduate D,Burlingame,CA
+Brad,Shen,1,Graduate D,Burlingame,CA
+Byron,Munoz,0,Bachelors,Burlingame,CA
+Gilbert,Chande,1,Partial Co,Burlingame,CA
+Shawna,Nath,1,High Schoo,Burlingame,CA
+Clarence,Raje,0,Partial Co,Burlingame,CA
+Ruben,Blanco,0,Bachelors,Burlingame,CA
+Hannah,Taylor,0,Graduate D,Burlingame,CA
+Orlando,Moreno,5,High Schoo,Burlingame,CA
+Paula,Torres,2,Bachelors,Burlingame,CA
+Marcus,Sanchez,4,Partial Co,Burlingame,CA
+Rachel,Brooks,4,Bachelors,Burlingame,CA
+Kristin,Raje,3,Partial Co,Burlingame,CA
+Aimee,Zhu,0,High Schoo,Burlingame,CA
+Julia,Scott,0,High Schoo,Burlingame,CA
+Diana,Diaz,0,Partial Hi,Burlingame,CA
+Erika,Alonso,0,High Schoo,Burlingame,CA
+Sebastian,Kelly,0,High Schoo,Burlingame,CA
+Jared,Cooper,0,High Schoo,Burlingame,CA
+Clarence,Tang,5,Bachelors,Burlingame,CA
+Megan,Perry,0,Partial Hi,Burlingame,CA
+Dawn,Liang,0,High Schoo,Burlingame,CA
+Orlando,Navarro,1,Bachelors,Burlingame,CA
+Haley,Baker,3,Partial Co,Camarillo,CA
+Gloria,Hernandez,0,Graduate D,Camarillo,CA
+Amanda,Kelly,1,Bachelors,Camarillo,CA
+Candace,Lopez,1,Partial Co,Canoga Park,CA
+Andre,Rodriguez,1,Partial Co,Carson,CA
+Mitchell,Tang,1,Partial Co,Cerritos,CA
+Dwayne,Diaz,1,Partial Co,Chula Vista,CA
+Victor,Navarro,4,Graduate D,Chula Vista,CA
+Donald,Rana,4,Partial Hi,Chula Vista,CA
+Peter,Yuan,0,Bachelors,Chula Vista,CA
+Jon,Raji,0,Bachelors,Chula Vista,CA
+Adrienne,Moreno,2,Partial Co,Chula Vista,CA
+Robert,Evans,5,High Schoo,Chula Vista,CA
+Denise,Chandra,1,Bachelors,Chula Vista,CA
+Julie,Rai,4,Graduate D,Chula Vista,CA
+Autumn,Yang,4,Partial Co,Chula Vista,CA
+Charles,Campbell,5,Graduate D,Chula Vista,CA
+Kelli,Zheng,1,Partial Co,Chula Vista,CA
+Madeline,Wright,2,Partial Co,Chula Vista,CA
+Vincent,Wu,1,High Schoo,Chula Vista,CA
+Josue,Ortega,1,Bachelors,Chula Vista,CA
+Nicolas,Nath,1,High Schoo,Chula Vista,CA
+Shane,Garcia,1,Graduate D,Chula Vista,CA
+Jasmine,Howard,3,Graduate D,Chula Vista,CA
+Cindy,Chandra,3,Graduate D,Chula Vista,CA
+Jessie,Li,0,Partial Co,Chula Vista,CA
+Brandon,Hughes,1,Bachelors,Chula Vista,CA
+Denise,Garcia,1,Bachelors,Chula Vista,CA
+Roger,Li,2,Partial Co,Chula Vista,CA
+Darryl,Huang,2,Partial Co,Chula Vista,CA
+Gabrielle,Richardson,3,High Schoo,Chula Vista,CA
+Raquel,Jimenez,3,High Schoo,Chula Vista,CA
+Gina,Ramos,5,Partial Hi,Chula Vista,CA
+Roy,Gomez,4,High Schoo,Chula Vista,CA
+Autumn,Ye,4,Partial Co,Chula Vista,CA
+Brendan,Luo,4,High Schoo,Chula Vista,CA
+Jon,Anand,4,Partial Hi,Chula Vista,CA
+Tabitha,Malhotra,5,Partial Hi,Chula Vista,CA
+Denise,Sai,3,High Schoo,Chula Vista,CA
+Ernest,Zheng,0,High Schoo,Chula Vista,CA
+Marshall,Zheng,0,High Schoo,Chula Vista,CA
+Michele,Alonso,0,Partial Hi,Chula Vista,CA
+Geoffrey,Srini,0,Partial Hi,Chula Vista,CA
+Barry,Sanchez,0,Partial Hi,Chula Vista,CA
+Clayton,Luo,2,Partial Co,Chula Vista,CA
+Alicia,Nath,0,Partial Hi,Chula Vista,CA
+Jose,Powell,2,Partial Co,Chula Vista,CA
+Sarah,Jenkins,0,Graduate D,Chula Vista,CA
+Claudia,Zhu,3,Partial Hi,Chula Vista,CA
+Tammy,Perez,1,High Schoo,Chula Vista,CA
+Courtney,Roberts,1,Partial Co,Chula Vista,CA
+Kendra,Torres,4,Graduate D,Chula Vista,CA
+Morgan,White,3,High Schoo,Chula Vista,CA
+Kristin,Sharma,1,High Schoo,Chula Vista,CA
+Sydney,Griffin,2,Partial Co,Chula Vista,CA
+Arianna,Perry,2,Partial Co,Chula Vista,CA
+Angel,Hernandez,2,Partial Co,Chula Vista,CA
+Jennifer,Henderson,4,High Schoo,Chula Vista,CA
+Luis,King,0,Partial Co,Chula Vista,CA
+Devin,Scott,0,Graduate D,Chula Vista,CA
+Isaac,Stewart,1,Graduate D,Chula Vista,CA
+Daniel,Robinson,1,Graduate D,Chula Vista,CA
+Ruth,Kapoor,2,Bachelors,Chula Vista,CA
+Lisa,He,5,High Schoo,Chula Vista,CA
+Hailey,Sanchez,4,Graduate D,Chula Vista,CA
+Erick,Raman,4,Graduate D,Chula Vista,CA
+Bryan,Peterson,5,Graduate D,Chula Vista,CA
+Joe,Munoz,3,Bachelors,Chula Vista,CA
+Rebekah,Gil,4,Bachelors,Chula Vista,CA
+Morgan,Carter,0,Graduate D,Chula Vista,CA
+Blake,Smith,0,Graduate D,Chula Vista,CA
+Monica,Suri,1,Graduate D,Chula Vista,CA
+Jesus,Ruiz,2,Bachelors,Chula Vista,CA
+Felicia,Hernandez,4,Bachelors,Chula Vista,CA
+Stephanie,Lopez,0,Partial Co,Chula Vista,CA
+Arthur,Arun,0,Partial Co,Chula Vista,CA
+Justin,Johnson,0,High Schoo,Chula Vista,CA
+Darren,Perez,2,High Schoo,Chula Vista,CA
+Elizabeth,Foster,0,High Schoo,Chula Vista,CA
+Alberto,Torres,5,Bachelors,Chula Vista,CA
+Katie,Raji,5,Bachelors,Chula Vista,CA
+Patrick,Cooper,1,Partial Co,Chula Vista,CA
+Kristi,Alonso,1,Partial Co,Chula Vista,CA
+Toni,Chandra,0,Graduate D,Chula Vista,CA
+Ann,Perez,5,Bachelors,Chula Vista,CA
+Stanley,Kapoor,1,Partial Co,Chula Vista,CA
+Sharon,Pal,5,Partial Co,Chula Vista,CA
+Gilbert,Lu,5,Partial Co,Chula Vista,CA
+Cedric,Aggarwal,0,High Schoo,Chula Vista,CA
+Robyn,Moreno,0,High Schoo,Chula Vista,CA
+David,Sharma,2,Bachelors,Chula Vista,CA
+Ramon,Wang,2,Graduate D,Chula Vista,CA
+Xavier,Reed,5,Bachelors,Chula Vista,CA
+Lacey,Xie,5,Bachelors,Chula Vista,CA
+Emma,Wood,5,Bachelors,Chula Vista,CA
+Riley,Ross,4,Bachelors,Chula Vista,CA
+Connor,Carter,3,Partial Co,Chula Vista,CA
+Isabella,Wilson,2,Graduate D,Chula Vista,CA
+Michael,Johnson,4,Partial Co,Chula Vista,CA
+Erika,Jimenez,3,Partial Co,Chula Vista,CA
+Dylan,Yang,2,Partial Hi,Chula Vista,CA
+Tony,Goel,2,Bachelors,Chula Vista,CA
+Brianna,Wilson,1,Graduate D,Chula Vista,CA
+Dalton,Allen,5,Bachelors,Citrus Heights,CA
+Curtis,Ye,4,Bachelors,Citrus Heights,CA
+Rachel,Cooper,5,Bachelors,Citrus Heights,CA
+Adrienne,Castro,2,High Schoo,Citrus Heights,CA
+Henry,Rodriguez,3,Partial Co,City Of Commerce,CA
+Douglas,Chandra,4,Bachelors,City Of Commerce,CA
+Caitlin,Cook,4,Partial Co,City Of Commerce,CA
+Casey,Romero,2,Partial Co,Colma,CA
+Ronnie,Zhou,0,Partial Co,Colma,CA
+Todd,Wu,0,Partial Co,Colma,CA
+Kelvin,Ye,2,Graduate D,Colma,CA
+Manuel,Verma,2,Graduate D,Colma,CA
+Bryant,Prasad,5,Partial Co,Colma,CA
+Bruce,Romero,0,Partial Co,Colma,CA
+Roy,Munoz,2,Graduate D,Colma,CA
+Adriana,Fernandez,2,Graduate D,Colma,CA
+Holly,Gonzalez,2,Graduate D,Colma,CA
+Steven,Ward,4,Bachelors,Colma,CA
+Damien,Gao,2,Bachelors,Colma,CA
+Tristan,Griffin,5,Graduate D,Colma,CA
+Andrea,Rivera,1,Bachelors,Colma,CA
+Edwin,Ma,2,Partial Co,Colma,CA
+Damien,Goel,2,Partial Co,Colma,CA
+Derrick,Gutierrez,0,Graduate D,Colma,CA
+Anthony,Smith,0,Graduate D,Colma,CA
+Henry,Sai,3,High Schoo,Colma,CA
+Karen,Ma,2,Bachelors,Colma,CA
+Jon,Xie,3,Bachelors,Colma,CA
+Christy,Anand,3,Bachelors,Colma,CA
+Shawn,Chande,0,Partial Hi,Colma,CA
+Tyler,Thomas,2,Graduate D,Colma,CA
+Derek,Aggarwal,0,Partial Hi,Colma,CA
+Ricky,Ortega,0,Partial Hi,Colma,CA
+Orlando,Ruiz,0,Partial Hi,Colma,CA
+Alyssa,Williams,2,Partial Co,Colma,CA
+Desiree,Hernandez,3,Partial Co,Colma,CA
+Marshall,Zhang,3,Partial Co,Colma,CA
+Kristin,Bhat,5,Graduate D,Colma,CA
+Jade,Ramirez,1,Partial Co,Colma,CA
+Caleb,Jai,1,Partial Co,Colma,CA
+Patricia,Sai,4,Graduate D,Colma,CA
+Damien,Kumar,4,Graduate D,Colma,CA
+Victor,Alonso,4,Graduate D,Colma,CA
+Kari,Arun,3,Partial Hi,Colma,CA
+Isabel,Hughes,2,Partial Co,Colma,CA
+Bradley,Nath,0,Bachelors,Colma,CA
+Steve,Zhang,1,Bachelors,Colma,CA
+Gabriel,Edwards,1,Partial Co,Colma,CA
+Adam,Coleman,0,High Schoo,Colma,CA
+Frederick,Lopez,0,High Schoo,Colma,CA
+Dylan,Johnson,0,Graduate D,Colma,CA
+Anna,Bennett,1,Bachelors,Colma,CA
+Johnathan,Mehta,1,Bachelors,Colma,CA
+Byron,Alonso,1,Bachelors,Colma,CA
+Monica,Engineer,1,Bachelors,Colma,CA
+Grant,Chande,2,Bachelors,Colma,CA
+Terrance,Verma,3,Bachelors,Colma,CA
+Sydney,Martin,0,Graduate D,Colma,CA
+Kristen,Liang,4,Graduate D,Colma,CA
+Hunter,Alexander,3,Bachelors,Colma,CA
+Jason,Henderson,4,Bachelors,Colma,CA
+Kaylee,Ramirez,1,Partial Co,Colma,CA
+Darren,Gomez,4,Graduate D,Colma,CA
+Ross,Chandra,5,Graduate D,Colma,CA
+Leah,Zhao,5,Bachelors,Colma,CA
+Devin,Gonzales,5,Bachelors,Colma,CA
+Franklin,Kumar,5,Bachelors,Colma,CA
+Javier,Moreno,1,Graduate D,Colma,CA
+Logan,Russell,1,Graduate D,Colma,CA
+Sydney,Taylor,1,Graduate D,Colma,CA
+Billy,Ramos,0,High Schoo,Colma,CA
+Mackenzie,Howard,0,High Schoo,Colma,CA
+Nathan,Gonzalez,0,Partial Co,Colma,CA
+Kevin,Allen,2,Partial Hi,Colma,CA
+Mary,Campbell,0,Graduate D,Colma,CA
+Savannah,Cooper,5,Bachelors,Colma,CA
+Christy,She,0,High Schoo,Colma,CA
+Brent,Xu,2,Graduate D,Colma,CA
+Kurt,Nath,0,Partial Co,Colma,CA
+Jillian,Subram,0,Bachelors,Colma,CA
+Deanna,Rana,1,High Schoo,Colma,CA
+Pedro,Alonso,1,Partial Co,Colma,CA
+Walter,Blanco,1,High Schoo,Colma,CA
+Trinity,Ward,0,Graduate D,Colma,CA
+Jermaine,Srini,3,Partial Co,Colma,CA
+Devon,Nath,3,Bachelors,Colma,CA
+Faith,Cooper,4,High Schoo,Colma,CA
+Gabrielle,Phillips,0,Partial Hi,Colma,CA
+Julie,Raji,0,High Schoo,Colma,CA
+Bethany,Sharma,4,High Schoo,Colma,CA
+Stacy,Romero,4,Bachelors,Colma,CA
+Victoria,Robinson,5,Bachelors,Colma,CA
+Carolyn,Jimenez,2,Graduate D,Colma,CA
+Alexis,Garcia,4,Bachelors,Colma,CA
+Jennifer,Flores,4,Bachelors,Colma,CA
+Marie,Hernandez,2,Partial Co,Colma,CA
+Lindsay,Yuan,0,Partial Co,Colma,CA
+Clifford,Rana,0,Partial Co,Colma,CA
+Rachel,Watson,2,High Schoo,Colma,CA
+Emmanuel,Mehta,2,Partial Co,Colma,CA
+Janet,Hernandez,2,Partial Co,Colma,CA
+Bryce,Kelly,1,Partial Co,Colma,CA
+Raul,Anand,1,Partial Co,Colma,CA
+Nancy,Madan,1,Partial Co,Colma,CA
+Shaun,Xie,0,High Schoo,Colma,CA
+Derek,Deng,0,Partial Hi,Colma,CA
+Connor,Long,0,High Schoo,Colma,CA
+Nelson,Munoz,2,Bachelors,Colma,CA
+Gloria,Moreno,2,Graduate D,Colma,CA
+Cesar,Patel,0,Partial Co,Colma,CA
+Samuel,Li,2,Bachelors,Colma,CA
+Marco,Sanchez,0,Bachelors,Colma,CA
+Sheila,Dominguez,1,Graduate D,Colma,CA
+Bailey,Edwards,4,Graduate D,Colma,CA
+Christy,Sharma,4,Bachelors,Colma,CA
+Robyn,Martin,4,Bachelors,Colma,CA
+Steve,Zhu,5,Bachelors,Colma,CA
+Isaac,Roberts,5,Bachelors,Colma,CA
+Alexis,Jackson,4,Bachelors,Colma,CA
+Mitchell,Chander,3,High Schoo,Colma,CA
+Darrell,Nara,3,Partial Co,Colma,CA
+Mya,Hughes,2,Graduate D,Colma,CA
+Edward,Allen,4,Partial Co,Colma,CA
+Lacey,Nath,2,Partial Co,Colma,CA
+Melinda,Munoz,0,Partial Co,Colma,CA
+Joe,Ruiz,5,Partial Co,Colma,CA
+Joel,Suri,4,High Schoo,Colma,CA
+Ariana,Torres,3,Partial Co,Colma,CA
+Wesley,She,5,Partial Co,Colma,CA
+Latoya,Xie,1,Bachelors,Colma,CA
+Geoffrey,Mehta,2,Graduate D,Colma,CA
+Christopher,Thompson,5,Bachelors,Colma,CA
+Adrienne,Alonso,4,Bachelors,Colma,CA
+Hannah,Miller,4,Partial Co,Colma,CA
+Alisha,Zhou,2,Graduate D,Colma,CA
+Heather,Ye,2,Partial Co,Colma,CA
+Tommy,Luo,1,Partial Co,Colma,CA
+Jerome,Munoz,1,Partial Co,Colma,CA
+Samantha,Butler,1,Bachelors,Colma,CA
+Ruth,Engineer,4,Bachelors,Colma,CA
+Dalton,Griffin,4,Bachelors,Colma,CA
+Sydney,Hughes,3,Graduate D,Colma,CA
+Emma,Martin,4,High Schoo,Colma,CA
+Larry,Castro,4,High Schoo,Colma,CA
+Colin,Nara,0,Partial Co,Colma,CA
+Melissa,Torres,0,Graduate D,Colma,CA
+Melinda,Alonso,1,Graduate D,Colma,CA
+Raul,Yuan,1,Graduate D,Colma,CA
+Leslie,Torres,5,Bachelors,Colma,CA
+Dwayne,Castro,0,Partial Co,Colma,CA
+Xavier,Lewis,0,High Schoo,Colma,CA
+Jose,Chen,0,High Schoo,Colma,CA
+Isabelle,Gonzales,0,Partial Hi,Colma,CA
+Abigail,Flores,1,Bachelors,Colma,CA
+Wyatt,Alexander,1,Partial Co,Colma,CA
+Carrie,Ramos,1,Partial Co,Colma,CA
+Colin,Hu,4,Graduate D,Colma,CA
+Krista,Serrano,0,Bachelors,Colma,CA
+Lori,Torres,4,High Schoo,Colma,CA
+Alejandro,Jai,0,High Schoo,Colma,CA
+Isabelle,Jenkins,0,Partial Co,Colma,CA
+Kathleen,Ruiz,0,Partial Hi,Colma,CA
+Gloria,Gomez,0,Partial Hi,Colma,CA
+Erik,Castro,3,Partial Co,Colma,CA
+Nicolas,She,0,Partial Hi,Colma,CA
+Logan,Lewis,3,Partial Hi,Colma,CA
+Julian,Price,1,Partial Co,Colma,CA
+Joy,Diaz,1,Bachelors,Colma,CA
+Ian,Turner,2,Partial Co,Colma,CA
+Katie,Aggarwal,1,Bachelors,Colma,CA
+Levi,Martinez,0,High Schoo,Colma,CA
+Ivan,Sanchez,0,High Schoo,Colma,CA
+Amy,Wang,0,High Schoo,Colma,CA
+Micheal,Moreno,0,Partial Hi,Colma,CA
+Gilbert,Wang,0,Partial Hi,Colma,CA
+Kari,Rubio,2,Partial Co,Colma,CA
+Roger,He,1,High Schoo,Colma,CA
+Jon,Kumar,4,Graduate D,Colma,CA
+Jonathon,Sanz,4,Graduate D,Colma,CA
+Stefanie,Arun,2,Partial Co,Colma,CA
+Bradley,Shan,2,Partial Co,Colma,CA
+Michele,Diaz,1,Graduate D,Colma,CA
+Willie,Li,0,Bachelors,Colma,CA
+Lacey,Chander,0,Partial Co,Colma,CA
+Bryan,Cook,2,High Schoo,Colma,CA
+Cristina,Aggarwal,5,High Schoo,Colma,CA
+Dominique,Madan,5,Bachelors,Colma,CA
+Faith,Sanders,4,High Schoo,Colma,CA
+Isabella,Patterson,4,Partial Co,Colma,CA
+Maria,Sanchez,0,Partial Hi,Colma,CA
+Jake,Sun,0,High Schoo,Colma,CA
+Donald,Sai,0,Partial Hi,Colma,CA
+Javier,Alonso,0,Partial Hi,Colma,CA
+Diane,Gutierrez,0,High Schoo,Concord,CA
+Jordyn,Hayes,5,Bachelors,Concord,CA
+Wyatt,Long,5,Bachelors,Concord,CA
+Seth,Martinez,1,Bachelors,Concord,CA
+Marie,Raman,2,Partial Co,Concord,CA
+Mandy,Wang,0,Partial Co,Concord,CA
+Marshall,Pal,0,High Schoo,Concord,CA
+Raymond,Patel,0,High Schoo,Concord,CA
+Miguel,Smith,2,Partial Hi,Concord,CA
+Roy,Rodriguez,2,Partial Co,Concord,CA
+Nicole,Johnson,0,Bachelors,Concord,CA
+Clarence,Bhat,1,Bachelors,Concord,CA
+Nicholas,Thomas,0,Bachelors,Concord,CA
+Francis,Rubio,0,Bachelors,Concord,CA
+Ricardo,Xu,5,Partial Co,Concord,CA
+Caroline,Hayes,2,Bachelors,Concord,CA
+Hailey,Kelly,1,Partial Co,Concord,CA
+Nathan,Evans,0,High Schoo,Concord,CA
+Faith,Richardson,0,High Schoo,Concord,CA
+Evan,Roberts,0,Bachelors,Concord,CA
+Cedric,Lal,0,Graduate D,Concord,CA
+Sheena,Yuan,0,Graduate D,Concord,CA
+Ian,Hernandez,1,Graduate D,Concord,CA
+Alexandria,James,4,Bachelors,Concord,CA
+Bryant,Gonzalez,2,High Schoo,Concord,CA
+Taylor,Long,2,High Schoo,Concord,CA
+Abby,Prasad,3,High Schoo,Concord,CA
+Mandy,Zhu,2,High Schoo,Concord,CA
+Ronnie,Chen,3,Partial Co,Concord,CA
+Sean,Bell,3,Partial Co,Concord,CA
+Mitchell,Raji,2,Graduate D,Concord,CA
+Peter,Shen,2,Partial Co,Concord,CA
+Alexandra,Simmons,2,High Schoo,Concord,CA
+Destiny,Thomas,3,Partial Co,Concord,CA
+Madison,Rodriguez,2,Graduate D,Concord,CA
+Steve,She,4,Partial Co,Concord,CA
+Fernando,Henderson,2,Graduate D,Concord,CA
+James,Taylor,0,High Schoo,Concord,CA
+Sydney,Cox,0,High Schoo,Concord,CA
+Gregory,Lal,2,Partial Co,Concord,CA
+Bianca,Zeng,1,Bachelors,Concord,CA
+Timothy,Roberts,2,Partial Co,Concord,CA
+Lori,Castro,1,Bachelors,Concord,CA
+Sierra,Lopez,1,Graduate D,Concord,CA
+Priscilla,Shan,3,Bachelors,Concord,CA
+Kristy,Romero,4,Bachelors,Concord,CA
+Kelly,Gonzales,1,Partial Co,Concord,CA
+Michael,Lee,4,Bachelors,Concord,CA
+Miguel,Hughes,1,Bachelors,Concord,CA
+Sean,Phillips,4,Graduate D,Concord,CA
+Micheal,Ortega,3,Bachelors,Concord,CA
+Teresa,Suarez,0,High Schoo,Concord,CA
+Mandy,Zhang,0,High Schoo,Concord,CA
+Cara,Yang,0,Partial Hi,Concord,CA
+Brandy,Rodriguez,2,Partial Co,Concord,CA
+Kate,Pal,2,Partial Co,Concord,CA
+Sheena,Tang,0,Partial Co,Concord,CA
+Deborah,Chander,0,Partial Co,Concord,CA
+Allison,Hill,1,High Schoo,Concord,CA
+Karen,Chen,2,Partial Co,Concord,CA
+Sierra,Mitchell,0,Graduate D,Concord,CA
+Alicia,Kumar,3,High Schoo,Concord,CA
+Devin,Rogers,0,Partial Hi,Concord,CA
+Gabrielle,Hill,0,Partial Hi,Concord,CA
+Natalie,Hall,0,High Schoo,Concord,CA
+Jake,Liang,0,High Schoo,Concord,CA
+Erik,Alonso,0,Partial Hi,Concord,CA
+Donna,Xu,0,Partial Hi,Concord,CA
+Robert,Gonzales,5,Bachelors,Concord,CA
+Ricky,Hernandez,5,Bachelors,Concord,CA
+Rachel,Peterson,2,High Schoo,Concord,CA
+Jacob,Garcia,0,Bachelors,Concord,CA
+Sabrina,Munoz,0,Partial Co,Concord,CA
+Jennifer,Powell,1,Bachelors,Concord,CA
+Ana,Gonzales,2,Partial Co,Concord,CA
+Byron,Blanco,5,Partial Co,Concord,CA
+David,Wang,0,High Schoo,Concord,CA
+Tabitha,Madan,0,Partial Hi,Concord,CA
+Emmanuel,Verma,4,Graduate D,Concord,CA
+Shaun,Yuan,4,Partial Co,Concord,CA
+Alexia,Patterson,0,Graduate D,Concord,CA
+Darrell,Xu,1,Graduate D,Concord,CA
+Bailey,Watson,1,Graduate D,Concord,CA
+Courtney,Collins,4,Bachelors,Concord,CA
+Diana,Gomez,4,Bachelors,Concord,CA
+Hailey,Bell,5,Bachelors,Concord,CA
+Patricia,Martinez,2,Partial Hi,Concord,CA
+Rodney,Castro,2,High Schoo,Concord,CA
+Max,Diaz,2,High Schoo,Concord,CA
+Kevin,Foster,3,High Schoo,Concord,CA
+Tanya,Ortega,5,Partial Co,Concord,CA
+Dawn,Cai,4,Partial Co,Concord,CA
+Natalie,Washington,4,Partial Co,Concord,CA
+Louis,Cai,4,Partial Co,Concord,CA
+Marshall,Zhou,4,Partial Co,Concord,CA
+Caroline,Powell,3,Partial Co,Concord,CA
+Phillip,Patel,3,Partial Co,Concord,CA
+Dale,Shan,3,Partial Co,Concord,CA
+Luke,Scott,2,Graduate D,Concord,CA
+Cara,Huang,5,Partial Co,Concord,CA
+Shannon,Ramos,0,Partial Co,Concord,CA
+Nathan,Hall,2,Partial Hi,Concord,CA
+Warren,Deng,4,Graduate D,Concord,CA
+Michele,Rana,5,Bachelors,Concord,CA
+Gabrielle,Nelson,5,Bachelors,Concord,CA
+Stacy,Jimenez,2,Graduate D,Concord,CA
+Mathew,Gutierrez,2,Bachelors,Concord,CA
+Whitney,Arun,2,Partial Co,Concord,CA
+Dwayne,Blanco,1,Graduate D,Concord,CA
+Ebony,Navarro,2,Partial Co,Concord,CA
+Devon,Anand,2,Bachelors,Concord,CA
+Megan,Bryant,2,Bachelors,Concord,CA
+Alicia,Deng,4,Graduate D,Concord,CA
+Pedro,Srini,5,Graduate D,Concord,CA
+Kellie,Alvarez,5,Graduate D,Concord,CA
+Jenny,Xie,5,Graduate D,Concord,CA
+Harold,Suri,4,High Schoo,Concord,CA
+Alexandra,Gonzalez,1,Partial Co,Concord,CA
+Luke,Hill,4,Bachelors,Concord,CA
+Maurice,Chande,3,Graduate D,Concord,CA
+Jarrod,Lopez,2,Bachelors,Concord,CA
+Marissa,Alexander,3,Bachelors,Concord,CA
+Mya,Powell,0,Partial Hi,Concord,CA
+Harold,Engineer,0,High Schoo,Concord,CA
+Gerald,Fernandez,0,Graduate D,Concord,CA
+Jackson,Flores,3,Partial Co,Concord,CA
+Hector,Rubio,3,Partial Co,Concord,CA
+Riley,Jenkins,1,Bachelors,Concord,CA
+Arthur,Serrano,1,Bachelors,Concord,CA
+Craig,Alvarez,1,Partial Co,Concord,CA
+John,Wilson,4,Graduate D,Coronado,CA
+Wesley,Ye,0,Graduate D,Coronado,CA
+Dominique,Srini,1,Bachelors,Coronado,CA
+Faith,Rivera,1,Bachelors,Coronado,CA
+Teresa,Sanz,1,High Schoo,Coronado,CA
+Latoya,Kumar,1,High Schoo,Coronado,CA
+Jenny,Sharma,3,Partial Hi,Coronado,CA
+Stephanie,Bennett,2,Partial Co,Coronado,CA
+Shannon,Rubio,3,Partial Co,Coronado,CA
+Tabitha,Chandra,3,Partial Co,Coronado,CA
+Barry,Gonzalez,0,High Schoo,Coronado,CA
+Riley,Griffin,0,Partial Hi,Coronado,CA
+Gabrielle,Sanchez,0,Partial Co,Coronado,CA
+Michele,Sharma,0,Partial Hi,Coronado,CA
+Ivan,Chandra,0,Partial Hi,Coronado,CA
+Derek,Luo,0,Partial Hi,Coronado,CA
+Clarence,Xu,0,Partial Co,Coronado,CA
+Alvin,Zhou,3,Partial Co,Coronado,CA
+Ramon,Liang,3,Partial Co,Coronado,CA
+Alyssa,Bennett,3,Partial Co,Culver City,CA
+Richard,Scott,1,High Schoo,Culver City,CA
+Madeline,Adams,1,Partial Co,Daly City,CA
+Lauren,Morris,4,Graduate D,Daly City,CA
+Ebony,Kapoor,1,Partial Co,Daly City,CA
+Kendra,Martin,0,Bachelors,Daly City,CA
+Adrienne,Diaz,1,Bachelors,Daly City,CA
+Xavier,Wilson,3,Partial Hi,Daly City,CA
+Ronnie,Guo,1,Bachelors,Daly City,CA
+Pamela,Gonzalez,3,Partial Co,Daly City,CA
+Kathleen,Dominguez,5,High Schoo,Daly City,CA
+Damien,Cai,0,High Schoo,Daly City,CA
+Briana,Serrano,3,High Schoo,Daly City,CA
+Erica,Guo,1,Bachelors,Daly City,CA
+Kristen,Zhu,2,Partial Co,Downey,CA
+Jessie,Lu,0,Partial Co,Downey,CA
+Corey,Shan,1,High Schoo,Downey,CA
+Wendy,Jimenez,0,Partial Co,Downey,CA
+Brenda,Patel,1,Partial Co,Downey,CA
+Martin,Chandra,0,Partial Co,Downey,CA
+James,Scott,2,High Schoo,Downey,CA
+Albert,Munoz,0,Bachelors,Downey,CA
+Brendan,Sharma,2,High Schoo,Downey,CA
+Harold,Verma,3,Partial Co,Downey,CA
+Kaitlyn,Davis,3,Bachelors,El Cajon,CA
+Kari,Jimenez,0,High Schoo,El Cajon,CA
+Cristina,Nath,0,Partial Hi,El Cajon,CA
+Carrie,Dominguez,0,High Schoo,El Cajon,CA
+Jake,Lu,0,High Schoo,El Cajon,CA
+Frederick,Arun,0,High Schoo,El Cajon,CA
+Elijah,Turner,5,Bachelors,El Cajon,CA
+Willie,Hu,2,High Schoo,El Segundo,CA
+Gloria,Jimenez,0,Graduate D,El Segundo,CA
+Dustin,Tang,2,Partial Co,El Segundo,CA
+Joanna,Rubio,1,Bachelors,Elk Grove,CA
+Laura,Yang,1,Bachelors,Escondido,CA
+Francisco,Malhotra,1,Partial Co,Eureka,CA
+Franklin,Nara,1,Partial Co,Fontana,CA
+Sebastian,Bailey,0,Bachelors,Fremont,CA
+Natalie,Davis,0,High Schoo,Fremont,CA
+Byron,Alvarez,0,Partial Hi,Fremont,CA
+Raul,Lal,0,Partial Hi,Fremont,CA
+Pedro,Garcia,2,Bachelors,Fremont,CA
+Terrance,Prasad,2,Graduate D,Fremont,CA
+Miguel,Campbell,4,Graduate D,Fremont,CA
+Alex,Hall,0,Graduate D,Fremont,CA
+Juan,Stewart,5,Bachelors,Fullerton,CA
+Douglas,Lopez,5,Bachelors,Gilroy,CA
+Curtis,Sun,2,Partial Co,Glendale,CA
+Courtney,Perez,2,Partial Co,Glendale,CA
+Jonathan,Wang,2,Partial Co,Glendale,CA
+Melissa,James,2,High Schoo,Glendale,CA
+Stephanie,Carter,3,High Schoo,Glendale,CA
+Leah,Lin,3,Partial Co,Glendale,CA
+Elijah,Gonzalez,3,Partial Co,Glendale,CA
+Morgan,Moore,0,Bachelors,Glendale,CA
+Karla,Rai,2,Graduate D,Glendale,CA
+Nathan,Allen,5,Partial Co,Glendale,CA
+Nicolas,Shen,5,Partial Co,Glendale,CA
+Jesse,Collins,4,High Schoo,Glendale,CA
+Warren,Liang,3,Partial Co,Glendale,CA
+Chad,Bhat,4,Graduate D,Glendale,CA
+Colleen,Ye,2,Bachelors,Glendale,CA
+Alexander,Moore,0,High Schoo,Glendale,CA
+Erika,Ramos,1,Graduate D,Grossmont,CA
+Clarence,Ma,1,Bachelors,Grossmont,CA
+Jenny,Gao,5,Graduate D,Grossmont,CA
+Alyssa,Peterson,1,Graduate D,Grossmont,CA
+Alyssa,Griffin,1,Graduate D,Grossmont,CA
+Samuel,Clark,2,Bachelors,Grossmont,CA
+Timothy,Carter,1,Partial Co,Grossmont,CA
+Haley,Roberts,2,Graduate D,Grossmont,CA
+Barbara,Yang,2,Bachelors,Grossmont,CA
+Ronald,Malhotra,5,Bachelors,Grossmont,CA
+Joy,Vazquez,5,Graduate D,Grossmont,CA
+Lindsey,Nara,0,High Schoo,Hanford,CA
+Leah,He,2,Partial Co,Hayward,CA
+Seth,Richardson,2,Partial Co,Imperial Beach,CA
+Xavier,Wright,0,Graduate D,Imperial Beach,CA
+Nicholas,Johnson,1,Bachelors,Imperial Beach,CA
+Seth,Coleman,4,High Schoo,Imperial Beach,CA
+Bryan,Watson,5,High Schoo,Imperial Beach,CA
+Devin,Bailey,5,Bachelors,Imperial Beach,CA
+Briana,Rubio,5,Bachelors,Imperial Beach,CA
+Devin,Miller,2,Partial Co,Imperial Beach,CA
+Karl,Chande,2,Partial Co,Imperial Beach,CA
+Arthur,Martinez,3,Partial Co,Imperial Beach,CA
+Wesley,Ma,2,Bachelors,Imperial Beach,CA
+Ian,Butler,4,Partial Co,Irvine,CA
+Barbara,Guo,4,High Schoo,La Jolla,CA
+Bradley,Deng,5,High Schoo,La Jolla,CA
+Martha,Liu,0,Partial Hi,La Jolla,CA
+Kayla,Clark,0,Partial Hi,La Jolla,CA
+Robyn,Serrano,4,Partial Co,La Jolla,CA
+Corey,Nath,5,Bachelors,La Jolla,CA
+Kenneth,Raji,4,Bachelors,La Jolla,CA
+Nathan,Coleman,3,Bachelors,La Jolla,CA
+Frank,Ortega,1,Partial Co,La Jolla,CA
+Daniel,Smith,2,High Schoo,La Jolla,CA
+Victoria,Harris,0,High Schoo,La Jolla,CA
+Alan,Wu,0,Partial Hi,La Jolla,CA
+Tamara,Zhang,0,Partial Hi,La Jolla,CA
+William,Garcia,0,Bachelors,Lake Elsinore,CA
+Heather,Liu,0,Bachelors,Lakewood,CA
+Robert,Edwards,1,Graduate D,Lakewood,CA
+Ivan,Srini,0,Partial Co,Lakewood,CA
+Diana,Blanco,0,Partial Co,Lakewood,CA
+Isabella,Turner,0,Partial Co,Lakewood,CA
+Jonathon,Blanco,0,Partial Co,Lakewood,CA
+Maria,Allen,1,Graduate D,Lakewood,CA
+Claudia,Wang,1,Graduate D,Lakewood,CA
+Jeffery,Xu,3,Bachelors,Lakewood,CA
+Natalie,Bennett,2,High Schoo,Lakewood,CA
+Reginald,Jimenez,4,High Schoo,Lemon Grove,CA
+Curtis,Zhu,3,Partial Co,Lemon Grove,CA
+Eugene,Zhou,3,Graduate D,Lemon Grove,CA
+Kristen,He,4,Graduate D,Lemon Grove,CA
+Gilbert,Chander,5,Graduate D,Lemon Grove,CA
+Rodney,Gil,2,Partial Hi,Lemon Grove,CA
+Andrea,Nelson,0,Partial Co,Lemon Grove,CA
+Beth,Ramos,0,High Schoo,Lemon Grove,CA
+Brandi,Torres,0,Partial Co,Lemon Grove,CA
+Bethany,Xie,0,Partial Co,Lemon Grove,CA
+Bryce,Gray,0,Bachelors,Lincoln Acres,CA
+Francis,Diaz,3,High Schoo,Lincoln Acres,CA
+Marvin,Martin,1,Bachelors,Lincoln Acres,CA
+Caleb,Adams,5,Bachelors,Lincoln Acres,CA
+Curtis,Zhao,1,Graduate D,Lincoln Acres,CA
+Kelvin,Liu,2,Bachelors,Lincoln Acres,CA
+Lori,Alonso,3,Bachelors,Lincoln Acres,CA
+Michael,Walker,0,Graduate D,Lincoln Acres,CA
+Stacey,Zhang,5,Graduate D,Lincoln Acres,CA
+Julia,Powell,2,Partial Co,Lincoln Acres,CA
+Arianna,Rogers,0,Graduate D,Long Beach,CA
+Sabrina,Gil,2,High Schoo,Long Beach,CA
+Fernando,Parker,2,Partial Co,Long Beach,CA
+Isaiah,Kelly,4,Graduate D,Long Beach,CA
+Melanie,Cook,1,Graduate D,Long Beach,CA
+Marie,Alonso,1,Bachelors,Long Beach,CA
+Andy,Moreno,1,Bachelors,Long Beach,CA
+Margaret,Zhao,1,Partial Co,Long Beach,CA
+Carolyn,Hernandez,0,Partial Co,Long Beach,CA
+Jake,Ye,1,High Schoo,Long Beach,CA
+Raul,Aggarwal,1,High Schoo,Long Beach,CA
+Oscar,Powell,1,High Schoo,Long Beach,CA
+Kristina,Prasad,0,Bachelors,Long Beach,CA
+Ian,Garcia,3,Bachelors,Los Angeles,CA
+Arianna,Long,2,High Schoo,Los Angeles,CA
+Karl,Anand,0,Bachelors,Los Angeles,CA
+Clarence,Shen,0,Graduate D,Los Angeles,CA
+April,Rai,3,Partial Co,Los Angeles,CA
+Oscar,Diaz,1,Partial Co,Los Angeles,CA
+Ruben,Martinez,1,Bachelors,Los Angeles,CA
+Alvin,Chander,1,Bachelors,Los Angeles,CA
+Edward,Bennett,1,Bachelors,Los Angeles,CA
+Darren,Mehta,3,Partial Hi,Los Angeles,CA
+Seth,Cooper,4,High Schoo,Los Angeles,CA
+April,Chande,2,Partial Co,Los Angeles,CA
+Gina,Ortega,1,Bachelors,Los Angeles,CA
+Brianna,Brown,0,High Schoo,Mill Valley,CA
+Omar,Wu,4,High Schoo,Mill Valley,CA
+Cheryl,Gomez,1,Partial Co,Mill Valley,CA
+Kathryn,Pal,1,High Schoo,Mill Valley,CA
+Julie,Chande,0,Bachelors,Mill Valley,CA
+Arthur,Lopez,0,Graduate D,Mill Valley,CA
+Jocelyn,Butler,3,High Schoo,Mill Valley,CA
+David,Zhang,1,Partial Co,Mill Valley,CA
+Gary,Suarez,1,Bachelors,Mill Valley,CA
+Diane,Ortega,1,Bachelors,Milpitas,CA
+Kevin,Henderson,1,Bachelors,Modesto,CA
+Clayton,Lal,3,Partial Hi,Modesto,CA
+Rachael,Malhotra,0,High Schoo,Monrovia,CA
+Eduardo,Jones,1,Partial Co,National City,CA
+Shannon,Diaz,0,Partial Co,National City,CA
+Kathleen,Blanco,2,Partial Co,National City,CA
+Jesse,Hill,2,Partial Hi,National City,CA
+Donna,Aggarwal,2,Partial Co,National City,CA
+Eduardo,Hayes,2,High Schoo,National City,CA
+Austin,Wilson,2,Partial Co,National City,CA
+Gavin,Flores,2,High Schoo,National City,CA
+Lydia,Madan,5,Partial Hi,National City,CA
+Ronnie,She,3,Partial Co,National City,CA
+Lacey,Tang,3,High Schoo,National City,CA
+Chase,Torres,0,High Schoo,National City,CA
+Kathryn,Kumar,0,High Schoo,National City,CA
+Teresa,Hernandez,5,Partial Hi,National City,CA
+Valerie,Ma,1,Partial Co,National City,CA
+Nathan,Jackson,1,Bachelors,Newark,CA
+Orlando,Ortega,4,Graduate D,Newport Beach,CA
+Kenneth,Shan,1,Graduate D,Newport Beach,CA
+Emmanuel,Sara,5,Graduate D,Newport Beach,CA
+Jesus,Torres,5,Graduate D,Newport Beach,CA
+Reginald,Rubio,0,Graduate D,Newport Beach,CA
+Cedric,Lu,1,Bachelors,Newport Beach,CA
+Darrell,Sharma,1,Partial Co,Newport Beach,CA
+Pamela,Perez,5,Partial Co,Newport Beach,CA
+Melvin,Sharma,2,Graduate D,Newport Beach,CA
+Bobby,Patel,2,Graduate D,Newport Beach,CA
+Jeremiah,Kelly,0,Bachelors,Norwalk,CA
+Ruth,Patel,1,Graduate D,Norwalk,CA
+Katelyn,Reed,1,Graduate D,Novato,CA
+Damien,Nath,4,Partial Co,Novato,CA
+Briana,Blanco,2,High Schoo,Novato,CA
+Kelvin,Lu,1,Bachelors,Novato,CA
+Nicholas,Smith,1,Bachelors,Novato,CA
+Krystal,Lin,3,Partial Co,Novato,CA
+Clarence,Wang,3,Partial Co,Oakland,CA
+Monique,Castro,3,High Schoo,Oakland,CA
+Charles,Nelson,1,Bachelors,Oakland,CA
+Nina,Shan,2,Bachelors,Oakland,CA
+Ethan,Li,5,Graduate D,Oakland,CA
+Samuel,Hall,4,Bachelors,Oakland,CA
+Damien,Yang,4,Bachelors,Oakland,CA
+Ramon,Zhu,1,Bachelors,Ontario,CA
+Kathryn,Rai,0,High Schoo,Ontario,CA
+Ian,Nelson,0,High Schoo,Orange,CA
+Mario,Deng,0,High Schoo,Oxnard,CA
+Kathleen,Suarez,3,Partial Co,Oxnard,CA
+Faith,Bennett,0,Graduate D,Palo Alto,CA
+Dalton,King,0,Graduate D,Palo Alto,CA
+Katherine,Peterson,2,High Schoo,Palo Alto,CA
+Courtney,Scott,2,High Schoo,Palo Alto,CA
+Sara,Hall,1,High Schoo,Palo Alto,CA
+Raymond,Garcia,2,Bachelors,Palo Alto,CA
+Devin,Edwards,0,Bachelors,Palo Alto,CA
+Diane,Gomez,0,Graduate D,Palo Alto,CA
+Ebony,Sanchez,0,Bachelors,Palo Alto,CA
+Shannon,Blanco,0,Bachelors,Palo Alto,CA
+Devin,Lewis,1,Partial Co,Palo Alto,CA
+Tamara,Shan,2,Bachelors,Palo Alto,CA
+Tracy,Luo,0,High Schoo,Palo Alto,CA
+Aimee,Zhao,0,High Schoo,Palo Alto,CA
+Alexandra,Butler,0,Partial Hi,Pleasanton,CA
+Alvin,Liang,0,Partial Hi,Redlands,CA
+Emma,Alexander,1,Bachelors,Redwood City,CA
+Alexandria,Cooper,0,Bachelors,Redwood City,CA
+Joy,Blanco,0,Bachelors,Redwood City,CA
+Evelyn,Sanchez,0,Partial Co,Redwood City,CA
+Emma,Powell,0,Partial Co,Redwood City,CA
+Lauren,Smith,3,Partial Co,Redwood City,CA
+Autumn,She,5,Partial Co,Richmond,CA
+Peter,Aggarwal,3,Partial Co,Sacramento,CA
+Kelvin,Pal,3,Partial Co,San Bruno,CA
+Emily,Lewis,2,Graduate D,San Carlos,CA
+Brenda,Raman,3,Graduate D,San Carlos,CA
+Isabella,Cooper,3,Graduate D,San Carlos,CA
+Molly,Garcia,5,Graduate D,San Carlos,CA
+Janelle,Sara,0,Partial Hi,San Carlos,CA
+Gary,Sanz,0,Partial Hi,San Carlos,CA
+Julia,Rivera,0,Partial Co,San Carlos,CA
+Makayla,Cook,3,High Schoo,San Carlos,CA
+Noah,Wang,3,Partial Hi,San Diego,CA
+Glenn,He,2,Partial Co,San Diego,CA
+Kara,Raje,0,Partial Co,San Diego,CA
+Derrick,Alvarez,0,High Schoo,San Diego,CA
+Philip,Serrano,0,High Schoo,San Diego,CA
+Theresa,Gil,2,Partial Co,San Diego,CA
+Wayne,Goel,4,High Schoo,San Diego,CA
+Suzanne,Zhao,3,Graduate D,San Diego,CA
+Maria,Parker,5,Partial Hi,San Diego,CA
+Edwin,Cai,5,High Schoo,San Diego,CA
+Robert,Wilson,5,High Schoo,San Diego,CA
+Catherine,Bell,5,High Schoo,San Diego,CA
+Noah,Sharma,2,High Schoo,San Diego,CA
+Linda,Blanco,2,High Schoo,San Francisco,CA
+Joanna,Navarro,2,Partial Co,San Francisco,CA
+Allen,Prasad,2,Partial Co,San Francisco,CA
+Rebekah,Rodriguez,3,Partial Co,San Francisco,CA
+Bruce,Verma,3,Partial Co,San Francisco,CA
+Alyssa,Long,4,Partial Co,San Francisco,CA
+Alexia,Gonzales,4,Partial Co,San Francisco,CA
+Clayton,Huang,4,Partial Co,San Francisco,CA
+Anne,Suarez,0,Partial Co,San Francisco,CA
+Melinda,Blanco,0,Partial Hi,San Francisco,CA
+Gina,Gomez,0,Partial Hi,San Francisco,CA
+Micheal,Jimenez,5,Partial Hi,San Gabriel,CA
+Billy,Vazquez,4,Partial Co,San Gabriel,CA
+Lucas,Patterson,4,Partial Co,San Gabriel,CA
+Sergio,Perez,1,Graduate D,San Gabriel,CA
+Edward,Simmons,1,Graduate D,San Gabriel,CA
+Donna,Jai,2,Bachelors,San Gabriel,CA
+Brad,Luo,1,Graduate D,San Gabriel,CA
+Hailey,Powell,3,Bachelors,San Gabriel,CA
+Julian,Gonzales,0,Graduate D,San Gabriel,CA
+Cedric,Jai,5,Graduate D,San Gabriel,CA
+Matthew,Wilson,5,Graduate D,San Gabriel,CA
+Christian,Diaz,3,Bachelors,San Gabriel,CA
+Joe,Rodriguez,4,Bachelors,San Gabriel,CA
+Marissa,Jenkins,4,Bachelors,San Jose,CA
+Carson,Bennett,0,High Schoo,San Jose,CA
+Sheena,Sharma,2,Partial Co,San Mateo,CA
+Jacob,Martin,2,Partial Co,San Ramon,CA
+Bruce,Malhotra,0,Graduate D,San Ysidro,CA
+Jordan,Hayes,0,Graduate D,Sand City,CA
+Jerry,Goel,1,Partial Co,Santa Ana,CA
+Blake,King,2,Partial Co,Santa Ana,CA
+Franklin,Cai,4,Graduate D,Santa Cruz,CA
+Gerald,Garcia,1,Graduate D,Santa Cruz,CA
+Mariah,Alexander,1,Graduate D,Santa Cruz,CA
+Candace,Garcia,1,Graduate D,Santa Cruz,CA
+Kari,Diaz,1,Graduate D,Santa Cruz,CA
+Meagan,Garcia,1,Bachelors,Santa Cruz,CA
+George,Malhotra,1,Bachelors,Santa Cruz,CA
+Holly,Rodriguez,0,High Schoo,Santa Cruz,CA
+Javier,Romero,1,Partial Co,Santa Cruz,CA
+Lindsey,Rai,1,Partial Co,Santa Cruz,CA
+Charles,Roberts,1,Bachelors,Santa Monica,CA
+Rosa,Zhu,4,Partial Hi,Santa Monica,CA
+Leah,Gao,2,Partial Co,Santa Monica,CA
+Colin,Sharma,2,Partial Co,Santa Monica,CA
+Vincent,Zeng,1,Bachelors,Santa Monica,CA
+Thomas,Scott,0,High Schoo,Santa Monica,CA
+Jacob,Jackson,0,Partial Co,Santa Monica,CA
+Isabella,Ramirez,0,Partial Hi,Santa Monica,CA
+Derrick,Suarez,0,High Schoo,Santa Monica,CA
+Dennis,Lu,0,Partial Co,Sherman Oaks,CA
+Wendy,Alonso,1,Partial Co,Simi Valley,CA
+Dalton,Harris,1,Graduate D,Spring Valley,CA
+Joy,Gil,3,Bachelors,Spring Valley,CA
+Holly,Madan,2,High Schoo,Spring Valley,CA
+Renee,Blanco,0,Bachelors,Spring Valley,CA
+Roberto,Castro,0,Bachelors,Spring Valley,CA
+Byron,Torres,0,Graduate D,Spring Valley,CA
+Donna,Nara,0,Graduate D,Spring Valley,CA
+Mallory,Torres,1,Graduate D,Spring Valley,CA
+Mariah,Morris,0,Bachelors,Spring Valley,CA
+Max,Castro,3,High Schoo,Stockton,CA
+Bryce,Sanchez,2,Partial Co,Torrance,CA
+Shannon,Moreno,1,Bachelors,Torrance,CA
+Joel,Lopez,2,Partial Co,Torrance,CA
+Megan,Lee,4,High Schoo,Torrance,CA
+Nicole,Garcia,0,Partial Hi,Torrance,CA
+Sydney,Nelson,0,Partial Co,Torrance,CA
+Drew,Nath,0,Partial Co,Torrance,CA
+Lydia,Mehta,0,Partial Co,Torrance,CA
+Taylor,Sanchez,1,Partial Co,Torrance,CA
+Carly,Pal,3,Bachelors,Torrance,CA
+Jodi,Raji,0,Bachelors,Torrance,CA
+Carrie,Navarro,5,Bachelors,Torrance,CA
+Barbara,Chander,1,Partial Co,Trabuco Canyon,CA
+Omar,Luo,0,High Schoo,Union City,CA
+Deborah,Jai,0,High Schoo,Upland,CA
+Katie,Tang,2,Bachelors,Vacaville,CA
+Catherine,Cook,0,High Schoo,Van Nuys,CA
+Ethan,Miller,0,Partial Co,Visalia,CA
+Pamela,Arun,1,Graduate D,Vista,CA
+Karl,Bhat,5,Partial Co,Vista,CA
+Natalie,Price,2,Graduate D,Walnut Creek,CA
+Erin,Ward,3,Graduate D,West Covina,CA
+Alexandra,Kelly,3,Partial Co,West Covina,CA
+Eric,Butler,5,Graduate D,West Covina,CA
+Stefanie,Madan,4,Bachelors,West Covina,CA
+Andrea,Carter,0,Partial Co,West Covina,CA
+Ethan,Washington,2,High Schoo,West Covina,CA
+Bobby,Malhotra,2,High Schoo,West Covina,CA
+Raul,Xie,2,High Schoo,West Covina,CA
+Mariah,Cook,4,Partial Co,West Covina,CA
+Joshua,Moore,3,Graduate D,West Covina,CA
+Jessica,Washington,2,Partial Co,West Covina,CA
+Pedro,Perez,2,High Schoo,West Covina,CA
+Mackenzie,Turner,2,High Schoo,West Covina,CA
+Julia,Gray,2,Partial Hi,West Covina,CA
+Sabrina,Gomez,5,High Schoo,Whittier,CA
+Savannah,Nelson,3,Partial Co,Woodland Hills,CA
+Krista,Rubio,3,High Schoo,Woodland Hills,CA
+Matthew,Lewis,4,Partial Co,Woodland Hills,CA
+Cameron,Ross,4,Partial Co,Woodland Hills,CA
+Omar,Guo,4,High Schoo,Woodland Hills,CA
+Bryant,Madan,0,High Schoo,Woodland Hills,CA
+Makayla,Morris,0,High Schoo,Woodland Hills,CA
+Johnny,Bhat,0,High Schoo,Woodland Hills,CA
+Nicole,Morgan,0,High Schoo,Woodland Hills,CA
+Clinton,Ortega,0,High Schoo,Woodland Hills,CA
